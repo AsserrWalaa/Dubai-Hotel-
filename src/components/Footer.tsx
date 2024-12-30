@@ -1,9 +1,9 @@
 import { Container, Row, Col } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import footerLogo from "../assets/1-removebg-preview (3) 1.jpg";
 import wp from "../assets/whtasapp.png";
 import fb from "../assets/fb.png";
 import ig from "../assets/ig.png";
-import { Link } from "react-router-dom";
 import "../style/footer.css";
 
 const Footer = () => {
@@ -127,13 +127,18 @@ const Footer = () => {
               </ul>
               <div className="d-flex justify-content-center ms-lg-5 mt-4">
                 <img src={fb} alt="fb" className="me-3" />
-                <img
-                  src={wp}
-                  alt="wp"
-                  width={50}
-                  height={50}
-                  className="mx-3 bg-success rounded-5"
-                />
+                <a
+                  href="https://wa.me/201066607106"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <img
+                    src={wp}
+                    alt="wp"
+                    width={50}
+                    height={50}
+                    className="mx-3 bg-success rounded-5"
+                  />
+                </a>
                 <img src={ig} alt="ig" className="mx-3" />
               </div>
             </Col>
