@@ -1,0 +1,10 @@
+/* place holders */
+.icon-placeholder {
+  font-family: "Font Awesome 5 Free", sans-serif;
+}
+
+.icon-placeholder::placeholder {
+  font-family: "Font Awesome 5 Free", sans-serif;
+  font-weight: 700; /* Ensures the icons have a bold weight */
+  color: #6c757d; /* Bootstrap's text-muted color for consistency */
+}

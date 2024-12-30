@@ -1,0 +1,151 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+/* Start Heros */
+.colorPrimary {
+  color: #006f73 !important;
+}
+.button {
+  border-color: #006f73 !important;
+  background-color: #006f73 !important;
+}
+.button2 {
+  border-color: #006f73;
+  color: #006f73;
+}
+.hero-offers {
+  position: relative;
+  background-image: url(../assets/homeClaning.jpeg);
+  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 1;
+}
+
+.hero-offers::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.hero-content {
+  position: relative;
+  z-index: 3 !important;
+}
+
+/* End Heros */
+
+/* start services */
+/* Base styling for radio buttons */
+
+.check {
+  color: #006f73;
+}
+/* end features */
+
+.topic-check {
+  background-color: #fff;
+  padding: 9px 20px 9px 20px;
+  border-color: #dee0fa !important;
+  font-weight: 500;
+}
+.btn-check:checked + .btn.topic-check {
+  background-color: #006f73;
+  color: #fff;
+}
+
+/* end services */
+/* start offers */
+.icon-placeholder {
+  font-family: "Font Awesome 5 Free", sans-serif;
+}
+
+.icon-placeholder::placeholder {
+  font-family: "Font Awesome 5 Free", sans-serif;
+  font-weight: 700; /* Ensures the icons have a bold weight */
+  color: #6c757d; /* Bootstrap's text-muted color for consistency */
+}
+
+/* end offers */
+/* conatctUS */
+.textOrange {
+  color: #f7712e;
+}
+.borderOrange {
+  border: solid 1px #f7712e !important;
+}
+/* customer review  */
+.custom-progress-bar .progress-bar {
+  background-color: #f7712e;
+}
+.star {
+  color: #ccc; /* Empty stars */
+  cursor: pointer;
+}
+
+.star.filled {
+  color: #f39c12; /* Filled stars (yellow) */
+}
+
+.nav-link.active {
+  color: #006f73;
+}
+.fixed-buttons {
+  position: fixed;
+  bottom: 10px; /* Distance from the bottom of the screen */
+  right: 10px; /* Distance from the right of the screen */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.fixed-buttons .btn {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+}
+
+.fixed-buttons button:hover {
+  transform: translateY(-5px) scale(1.1); /* Slightly move and enlarge */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Bounce animation */
+.fixed-buttons button {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0); /* Start and end at original position */
+  }
+  40% {
+    transform: translateY(-10px); /* Move up slightly */
+  }
+  60% {
+    transform: translateY(-5px); /* Move up less */
+  }
+}
+/* booking  tabs */
+.custom-tabs .nav-link {
+  color: grey; /* Default color for unselected tabs */
+  font-weight: 500;
+}
+
+.custom-tabs .nav-link.active {
+  color: #006f73 !important; /* Color for selected tab */
+  font-weight: bold;
+}
+.nav-link:hover {
+  color: #006f73 !important;
+}
