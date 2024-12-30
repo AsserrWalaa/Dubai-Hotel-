@@ -2,7 +2,7 @@ import React from "react";
 import WhatsappButton from "../assets/whtasapp.png"; // Update with the correct path
 import Call from "../assets/call.png"; // Update with the correct path
 import "../style/global.css";
-
+// new comment
 const FixedButtons: React.FC = () => {
   const whatsappNumber = "+201066607106";
   const callNumber = "+201066607106";
