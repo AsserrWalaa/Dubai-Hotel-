@@ -2,7 +2,6 @@
 import { Card, Col } from "react-bootstrap";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import { Clock } from "react-bootstrap-icons";
-import Fixed from "../components/FixedButtons";
 
 // mui imports
 
@@ -449,7 +448,6 @@ const Home = () => (
       </div>
     </section>
     {/* end of section */}
-    <Fixed />
     {/* footer */}
     <Footer />
   </>

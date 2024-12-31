@@ -1,9 +1,5 @@
-<<<<<<< HEAD
 import { Row, Col } from "react-bootstrap";
 import { MdOutlineEmail } from "react-icons/md";
-=======
-import { Container, Row, Col } from "react-bootstrap";
->>>>>>> 0686e2e61002fb7bdf6478c4fcf107660a2ad20f
 import { Link } from "react-router-dom";
 import footerLogo from "../assets/1-removebg-preview (3) 1.jpg";
 import wp from "../assets/whtasapp.png";
