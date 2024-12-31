@@ -6,13 +6,14 @@ body {
   color: #006f73 !important;
 }
 .button {
-  border-color: #006f73 !important;
+  border: 0px !important;
   background-color: #006f73 !important;
 }
 .button2 {
   border-color: #006f73;
   color: #006f73;
 }
+
 .hero-offers {
   position: relative;
   background-image: url(../assets/homeClaning.jpeg);
@@ -50,26 +51,25 @@ body {
 
 .topic-check {
   background-color: #fff;
-  padding: 9px 20px 9px 20px;
+  padding: 9px 20px;
   border-color: #dee0fa !important;
   font-weight: 500;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for hover effect */
+  border-radius: 4px;
 }
-.btn-check:checked + .btn.topic-check {
-  background-color: #006f73;
-  color: #fff;
+
+.topic-check:hover {
+  background-color: #006f73 !important; /* Light gray background on hover */
+  color: white !important;
+}
+
+.btn-active {
+  background-color: #006f73 !important; /* Active background color */
+  color: #fff !important; /* Active text color */
+  border-color: #006f73; /* Optional: Adjust border color on active */
 }
 
 /* end services */
-/* start offers */
-.icon-placeholder {
-  font-family: "Font Awesome 5 Free", sans-serif;
-}
-
-.icon-placeholder::placeholder {
-  font-family: "Font Awesome 5 Free", sans-serif;
-  font-weight: 700; /* Ensures the icons have a bold weight */
-  color: #6c757d; /* Bootstrap's text-muted color for consistency */
-}
 
 /* end offers */
 /* conatctUS */
@@ -78,6 +78,9 @@ body {
 }
 .borderOrange {
   border: solid 1px #f7712e !important;
+}
+.borderPrimary {
+  border: 1px #006f73 solid !important;
 }
 /* customer review  */
 .custom-progress-bar .progress-bar {

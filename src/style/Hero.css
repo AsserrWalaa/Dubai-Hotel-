@@ -2,3 +2,7 @@
   position: relative;
   z-index: 3 !important;
 }
+.callUs:hover {
+  color: white !important;
+  background-color: #f7712e !important;
+}

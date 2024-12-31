@@ -1,100 +1,121 @@
-import React from "react";
-import { Navbar, Nav, Container } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { Navbar, Nav, NavDropdown } from "react-bootstrap";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import logo from "../assets/1-removebg-preview (3) 1.jpg";
 import profile from "../assets/p2.png";
-
-import { NavDropdown } from "react-bootstrap";
-import "../style/navStyle.css";
+import "../style/SecondaryNav.css";
 
 const AppNavbar: React.FC = () => {
+  const location = useLocation();
+  const [selectedLanguage, setSelectedLanguage] = useState("English");
+
+  const handleSelectLanguage = (language: string) => {
+    setSelectedLanguage(language);
+  };
+  const navigate = useNavigate();
+  const profileOptions = [
+    { label: "My Profile", path: "/myProfile" },
+    { label: "My Booking", path: "/myBooking" },
+    // Add more options as needed
+  ];
+
   return (
-    <Navbar bg="transparent" expand="lg" className="shadow-none">
-      {/* Container with full width and vertical centering */}
-      <Container className="d-flex align-items-center justify-content-between">
-        {/* Logo aligned to the left */}
+    <Navbar bg="transparent" expand="lg" id="navbar2" className="">
+      <div className="container d-flex align-items-center justify-content-between">
+        {/* Logo */}
         <Navbar.Brand as={Link} to="/">
           <img
             src={logo}
             alt="Logo"
-            width="90"
-            height="90"
-            className="rounded-5"
+            width="120"
+            height="80"
+            className="rounded-5 pe-5"
           />
         </Navbar.Brand>
 
-        {/* Navbar Toggle Button for Small Screens */}
-        <Navbar.Toggle aria-controls="navbar-nav" />
+        {/* Navbar Toggle */}
+        <Navbar.Toggle aria-controls="navbar-nav" className="colorPrimary" />
 
-        {/* Navbar Collapse for Links */}
+        {/* Navbar Collapse */}
         <Navbar.Collapse
           id="navbar-nav"
           className="justify-content-center text-center mx-auto">
           <Nav className="d-flex align-items-center mx-auto justify-content-center">
-            {/* Navbar Links */}
-            <Nav.Link as={Link} to="/" className="text-secondary fs-5 me-2 ">
+            {/* Nav Links */}
+            <Nav.Link
+              as={Link}
+              to="/"
+              className={`fs-6 me-2 ${
+                location.pathname === "/" ? "active" : ""
+              }`}>
               Home
             </Nav.Link>
             <Nav.Link
               as={Link}
               to="/services"
-              className="text-secondary fs-5 me-2 ">
+              className={`fs-6 me-2 ${
+                location.pathname === "/services" ? "active" : ""
+              }`}>
               Service
             </Nav.Link>
-            <Nav.Link as={Link} to="/" className="text-secondary fs-5 me-2 ">
+            <Nav.Link
+              as={Link}
+              to="/offers"
+              className={`fs-6 me-2 ${
+                location.pathname === "/offers" ? "active" : ""
+              }`}>
               Offers
             </Nav.Link>
             <Nav.Link
               as={Link}
               to="/about"
-              className="text-secondary fs-5 me-2">
+              className={`fs-6 me-2 ${
+                location.pathname === "/about" ? "active" : ""
+              }`}>
               About Us
             </Nav.Link>
             <Nav.Link
               as={Link}
               to="/contact"
-              className="text-secondary fs-5 me-2">
+              className={`fs-6 me-2 ${
+                location.pathname === "/contact" ? "active" : ""
+              }`}>
               Contact Us
             </Nav.Link>
           </Nav>
 
-          {/* Dropdown aligned to the right */}
-          <Nav className="mx-auto">
+          {/* Dropdowns */}
+          <Nav>
+            {/* Language Dropdown */}
             <NavDropdown
-              className="fs-5"
-              title={<span className="text-secondary">Language</span>}
+              className="fs-6"
+              title={<span>{selectedLanguage}</span>}
               menuVariant="light">
-              <NavDropdown.Item href="#action/3.1" className="text-dark">
-                English
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2" className="text-dark">
-                Arabic
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3" className="text-dark">
-                Turkish
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.4" className="text-dark">
-                French
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.5" className="text-dark">
-                Italian
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.6" className="text-dark">
-                German
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.7" className="text-dark">
-                Russian
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.8" className="text-dark">
-                Hindi
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.9" className="text-dark">
-                Korean
-              </NavDropdown.Item>
+              {[
+                "English",
+                "Arabic",
+                "Turkish",
+                "French",
+                "Italian",
+                "German",
+                "Russian",
+                "Hindi",
+                "Korean",
+              ].map((language) => (
+                <NavDropdown.Item
+                  key={language}
+                  onClick={() => handleSelectLanguage(language)}
+                  className={`dropdown-item text-secondary ${
+                    selectedLanguage === language ? "selected" : ""
+                  }`}>
+                  {language}
+                </NavDropdown.Item>
+              ))}
             </NavDropdown>
+
             {/* Profile Dropdown */}
             <NavDropdown
-              className="profile-dropdown no-arrow"
+              className="fs-6 profile-dropdown no-arrow ms-lg-3"
               title={
                 <img
                   src={profile}
@@ -110,25 +131,18 @@ const AppNavbar: React.FC = () => {
               }
               menuVariant="light"
               id="profile-dropdown">
-              <NavDropdown.Item as="div" className="text-dark">
-                <Link
-                  to="/myProfile"
-                  className="text-decoration-none text-dark">
-                  My Profile
-                </Link>
-              </NavDropdown.Item>
-              <Link to="/myBooking" className="text-decoration-none text-dark">
-                <NavDropdown.Item href="#Booking" className="text-dark">
-                  My Booking
+              {profileOptions.map((option) => (
+                <NavDropdown.Item
+                  key={option.label}
+                  onClick={() => navigate(option.path)}
+                  className="dropdown-item text-secondary">
+                  {option.label}
                 </NavDropdown.Item>
-              </Link>
-              {/* <NavDropdown.Item href="#logout" className="text-danger">
-                Logout
-              </NavDropdown.Item> */}
+              ))}
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
-      </Container>
+      </div>
     </Navbar>
   );
 };

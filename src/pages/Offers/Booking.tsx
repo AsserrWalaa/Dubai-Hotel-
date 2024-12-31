@@ -3,7 +3,12 @@ import SecondaryNav from "../../components/Navbar";
 import "../../style/global.css";
 import { Form, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import "@fortawesome/fontawesome-free/css/all.min.css";
+import { FiUserPlus } from "react-icons/fi";
+import { MdOutlinePhoneInTalk, MdOutlineCalendarMonth } from "react-icons/md";
+import { CiLocationOn, CiClock2 } from "react-icons/ci";
+import { GoNote } from "react-icons/go";
+import { IoHomeOutline } from "react-icons/io5";
+import { BiMessageDetail } from "react-icons/bi";
 
 const Booking: React.FC = () => {
   return (
@@ -14,87 +19,142 @@ const Booking: React.FC = () => {
         <Container className="mt-4">
           <Form>
             {/* First Name */}
-            <Form.Group className="position-relative my-5">
+            <Form.Group className="position-relative my-5 ">
               <Form.Label>First Name</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="&#xf007;   First Name"
-                className="icon-placeholder"
-              />
+              <div className="position-relative">
+                <FiUserPlus
+                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-3"
+                  style={{ pointerEvents: "none" }}
+                />
+                <Form.Control
+                  type="text"
+                  placeholder="First Name"
+                  className="ps-5 borderPrimary rounded-2"
+                />
+              </div>
             </Form.Group>
-
             {/* Phone Number */}
             <Form.Group className="position-relative my-5">
               <Form.Label>Phone Number</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="&#xf095;   Phone Number"
-                className="icon-placeholder"
-              />
+              <div className="position-relative">
+                <MdOutlinePhoneInTalk
+                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-3"
+                  style={{ pointerEvents: "none" }}
+                />
+                <Form.Control
+                  type="text"
+                  placeholder="Phone Number"
+                  className="ps-5 borderPrimary rounded-2"
+                />
+              </div>
             </Form.Group>
-
             {/* City */}
             <Form.Group className="position-relative my-5">
               <Form.Label>City</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="&#xf64f;   City"
-                className="icon-placeholder"
-              />
+              <div className="position-relative">
+                <CiLocationOn
+                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-3"
+                  style={{ pointerEvents: "none" }}
+                />
+                <Form.Control
+                  type="text"
+                  placeholder="City"
+                  className="ps-5 borderPrimary rounded-2"
+                />
+              </div>
             </Form.Group>
-
             {/* Service Type */}
             <Form.Group className="position-relative my-5">
               <Form.Label>Service Type</Form.Label>
-              <Form.Select className="icon-placeholder">
-                <option value="" disabled selected>
-                  &#xf0ae; Service Type
-                </option>
-                <option value="service1">Service 1</option>
-                <option value="service2">Service 2</option>
-                <option value="service3">Service 3</option>
-              </Form.Select>
+              <div className="position-relative">
+                <GoNote
+                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-3"
+                  style={{ pointerEvents: "none" }}
+                />
+                <Form.Select className="ps-5 icon-placeholder borderPrimary rounded-2">
+                  <option value="" disabled selected>
+                    Service Type
+                  </option>
+                  <option value="service1">Service 1</option>
+                  <option value="service2">Service 2</option>
+                  <option value="service3">Service 3</option>
+                </Form.Select>
+              </div>
             </Form.Group>
-
             {/* Service Date */}
             <Form.Group className="position-relative my-5">
               <Form.Label>Service Date</Form.Label>
-              <Form.Control
-                type="date"
-                placeholder="&#xf073;   Service Date"
-                className="icon-placeholder"
-              />
+              <div className="position-relative">
+                <MdOutlineCalendarMonth
+                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-3"
+                  style={{ pointerEvents: "none" }}
+                />
+                <Form.Control
+                  className="ps-5 icon-placeholder borderPrimary rounded-2"
+                  placeholder="Service Date"
+                  style={{
+                    appearance: "none",
+                    MozAppearance: "none",
+                    WebkitAppearance: "none",
+                  }}
+                />
+              </div>
             </Form.Group>
-
             {/* Select Time */}
             <Form.Group className="position-relative my-5">
               <Form.Label>Select Time</Form.Label>
-              <Form.Control
-                type="time"
-                placeholder="&#xf017;   Select Time"
-                className="icon-placeholder"
-              />
+              <div className="position-relative">
+                {/* Clock Icon */}
+                <CiClock2
+                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-3"
+                  style={{ pointerEvents: "none" }}
+                />
+                {/* Time Input */}
+                <Form.Control
+                  className="ps-5 icon-placeholder borderPrimary rounded-2"
+                  placeholder="Select Time"
+                  style={{
+                    appearance: "none",
+                    MozAppearance: "none",
+                    WebkitAppearance: "none",
+                  }}
+                />
+              </div>
             </Form.Group>
-
             {/* Address */}
             <Form.Group className="position-relative my-5">
               <Form.Label>Address</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="&#xf015;   Address"
-                className="icon-placeholder"
-              />
+              <div className="position-relative">
+                {/* Home Icon */}
+                <IoHomeOutline
+                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-3"
+                  style={{ pointerEvents: "none" }}
+                />
+                {/* Address Input */}
+                <Form.Control
+                  type="text"
+                  className="ps-5 icon-placeholder borderPrimary rounded-2"
+                  placeholder="Address"
+                />
+              </div>
             </Form.Group>
-
             {/* Notes */}
             <Form.Group className="position-relative my-5">
               <Form.Label>Notes</Form.Label>
-              <Form.Control
-                as="textarea"
-                rows={3}
-                placeholder="&#xf249;   Notes"
-                className="icon-placeholder "
-              />
+              <div className="position-relative">
+                {/* Message Detail Icon */}
+                <BiMessageDetail
+                  className="position-absolute t start-0 translate-middle-y text-muted ms-3"
+                  style={{ pointerEvents: "none", top: 20 }}
+                />
+                {/* Notes Textarea */}
+                <Form.Control
+                  as="textarea"
+                  rows={3}
+                  className="ps-5 icon-placeholder borderPrimary rounded-2"
+                  placeholder="Notes"
+                />
+              </div>
             </Form.Group>
           </Form>
         </Container>

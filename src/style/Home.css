@@ -3,6 +3,12 @@
 /* start our service section */ /* Basic styling for the cards */
 .ourServices {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 352px;
+  width: 270px !important;
 }
 /* Hover effect: scaling and shadow */
 .ourServices:hover {
@@ -112,14 +118,42 @@
     ),
     url(../assets/window.jpeg);
 }
-
-.ourServices {
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  min-height: 352px;
-  width: 270px !important;
+.arrow-white,
+.arrowOrange {
+  width: 40px;
+  height: 40px;
+  display: none; /* Hidden by default */
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%); /* Center the arrow */
+  z-index: 100;
+  pointer-events: none; /* Prevent the arrow from interfering with hover */
+  border-radius: 50px;
 }
+.arrow-white {
+  background-color: #f7712e;
+  border: #f7712e;
+}
+.arrowOrange {
+  background-color: white;
+  border-radius: 50px;
+}
+/* Show the arrow when hovering over the .ourServices container */
+.ourServices:hover .arrow-white {
+  display: block; /* Show the arrow when hovering over .ourServices */
+}
+/* Hide the arrow when hovering over the arrow itself */
+.arrow-white:hover {
+  display: none !important; /* Hide the arrow when hovering over the arrow */
+}
+.arrow-white:hover .arrowOrange {
+  display: block; /* Make .arrowOrange visible on hover */
+}
+.ourServices:hover .serviceName {
+  padding-bottom: 80px !important;
+}
+
 /* end our service section */
 
 /* how it works */

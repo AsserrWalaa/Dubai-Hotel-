@@ -44,8 +44,8 @@ const CustomerReview: React.FC = () => {
     <>
       <SecondaryHero />
       <section>
-        <div className="d-flex container py-5">
-          <div className="d-flex w-100">
+        <div className="d-flex container py-5 ">
+          <div className="d-flex w-100 gap-5">
             <div className="w-100">
               <ol>
                 <li className="my-3">

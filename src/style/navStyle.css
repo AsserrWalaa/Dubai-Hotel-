@@ -28,6 +28,10 @@
   border-bottom-color: transparent !important; /* Hide the bottom border */
   margin-left: 20px;
 }
+.navbar-nav .nav-link.dropdown-toggle::after:hover {
+  color: #006f73 !important;
+  background-color: #006f73;
+}
 
 .custom-select-no-bg {
   background-color: transparent !important;
@@ -50,4 +54,7 @@
 .dropdown-item.selected {
   color: #006f73; /* Color for the selected item */
   font-weight: bold; /* Optional: make the selected item bold */
+}
+.navShadow {
+  box-shadow: 0 1px hsl(0, 4%, 95%);
 }

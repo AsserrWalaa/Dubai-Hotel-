@@ -12,6 +12,7 @@ import c3 from "../../assets/c3.png";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import Footer from "../../components/Footer";
 
 // Testimonials Data
 const clientTestimonials = [
@@ -45,7 +46,7 @@ const OfferDetails: React.FC = () => {
     <>
       <SecondaryNav />
       {/* Apartment Sterilization Section */}
-      <section>
+      <section style={{ height: 900 }}>
         <Container>
           <Row className="my-5 py-5 gap-3 gap-lg-0">
             {/* Left Content Section */}
@@ -115,16 +116,18 @@ const OfferDetails: React.FC = () => {
 
       {/* Customer Reviews Section */}
       <section className="container mb-5">
-        <h4 className="d-flex justify-content-between align-items-center mt-5">
+        <h4 className="d-flex justify-content-between align-items-center">
           Excerpts From Customers Reviews:
-          <a href="#" className="text-dark text-decoration-underline fs-6">
-            See All
-          </a>
+          <Link to="/customerReviews">
+            <button className="text-dark border-0 bg-transparent text-decoration-underline fs-5">
+              See All
+            </button>
+          </Link>
         </h4>
         {clientTestimonials.map((client, index) => (
           <div
             key={index}
-            className="client-review px-4 p-1 rounded-3 my-3 border border pt-3">
+            className="client-review px-4 p-1 rounded-3 my-3 borderOrange pt-3">
             <div className="d-flex align-items-center">
               <img
                 src={client.image}
@@ -149,6 +152,7 @@ const OfferDetails: React.FC = () => {
           </button>
         </Link>
       </section>
+      <Footer />
     </>
   );
 };

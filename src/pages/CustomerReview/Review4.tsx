@@ -10,6 +10,7 @@ import "../../style/global.css";
 const clientTestimonials = [
   {
     name: "Alaa Ahmed",
+    date: "12/10/2024",
     testimonial:
       "Exceptional service! The team was professional, thorough, and exceeded my expectations. Highly recommended!",
     rating: 4,
@@ -18,6 +19,7 @@ const clientTestimonials = [
   },
   {
     name: "Sarah Johnson",
+    date: "12/10/2024",
     testimonial:
       "I’ve never seen our apartments this spotless. They pay attention to every detail and ensure everything is perfect.",
     rating: 5,
@@ -26,6 +28,7 @@ const clientTestimonials = [
   },
   {
     name: "Jacob Jones",
+    date: "12/10/2024",
     testimonial:
       "Reliable and efficient. They made managing my properties so much easier with their excellent cleaning services.",
     rating: 5,
@@ -44,7 +47,7 @@ const FourthReview: React.FC = () => {
         {clientTestimonials.map((client, index) => (
           <div
             key={index}
-            className="client-review px-4 p-1 borderOrange rounded-2 my-3 pt-3">
+            className="client-review px-4 p-1 borderOrange rounded-2 my-3 pt-3 d-flex flex-column">
             <div className="d-flex align-items-center">
               <img
                 src={client.image}
@@ -55,18 +58,21 @@ const FourthReview: React.FC = () => {
               <div>
                 <h6 className="mb-1">{client.name}</h6>
               </div>
+              <div className="ms-auto">
+                <h6 className="text-secondary">{client.date}</h6>
+              </div>
             </div>
             <div className="d-flex">
-              <h6 className="mt-2 pb-3">
+              <h6 className="mt-3 pb-3">
                 <span className="colorPrimary">Service : </span>
                 {client.service}
               </h6>
-              <span className="text-warning mx-3 fs-4">
+              <span className="text-warning mx-3 mt-2 fs-4">
                 {"★".repeat(client.rating)}
                 {"☆".repeat(5 - client.rating)}
               </span>
             </div>
-            <p className="mt-2 pb-3">{client.testimonial}</p>
+            <p className="">{client.testimonial}</p>
           </div>
         ))}
       </section>

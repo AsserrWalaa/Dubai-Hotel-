@@ -1,36 +1,49 @@
-import { Container, Row, Col } from "react-bootstrap";
+import { Row, Col } from "react-bootstrap";
+import { MdOutlineEmail } from "react-icons/md";
+import { Link } from "react-router-dom";
 import footerLogo from "../assets/1-removebg-preview (3) 1.jpg";
 import wp from "../assets/whtasapp.png";
 import fb from "../assets/fb.png";
 import ig from "../assets/ig.png";
-import { Link } from "react-router-dom";
 import "../style/footer.css";
 
 const Footer = () => {
   return (
-    <div className="d-flex flex-column min-vh-100">
+    <div className="d-flex flex-column ">
       {/* Main content section */}
-      <div className="flex-grow-1">{/* Your main content goes here */}</div>
-
       {/* Footer */}
       <footer
-        className="py-5 mt-5 w-100 px-5"
+        className="py-5 mt-auto w-100 mx-auto"
         style={{ backgroundColor: "#006f73" }}>
-        <div className="d-flex container justify-content-center gap-5 flex-column flex-sm-row">
-          <h3 className="text-light">Subscribe to Our Newsletter</h3>
+        <div className="d-flex container justify-content-center gap-5 flex-column flex-sm-row pb-4">
+          <h4 className="text-light">Subscribe to Our Newsletter</h4>
           <div className="input-footer d-flex align-items-center">
-            <input
-              type="text"
-              className="w-100 rounded-5 border-0 py-2 px-5"
-              id="input-field-footer"
-              placeholder="Enter text"
-            />
-            <button className="input-button-footer button rounded-5">
-              Subscribe Now
-            </button>
+            <div className="position-relative" style={{ width: 350 }}>
+              <MdOutlineEmail
+                className="position-absolute text-secondary"
+                style={{
+                  top: "50%",
+                  left: "15px",
+                  transform: "translateY(-50%)",
+                  fontSize: "18px", // Adjust the size as needed
+                }}
+              />
+              <div className="d-flex justify-content-end">
+                <input
+                  type="text"
+                  className="w-100 rounded-5 border-0 py-2 px-5 ps-5"
+                  id="input-field-footer"
+                  placeholder="Enter Email"
+                />
+              </div>
+              <button className="input-button-footer button rounded-5">
+                Subscribe Now
+              </button>
+            </div>
           </div>
         </div>
-        <Container>
+        <div>
+          <hr className="mx-auto w-75 text-light " />
           <Row className="mt-5 text-center text-sm-start text-light justify-content-center align-items-start my-auto mx-auto gap-4">
             {/* Column 1 */}
             <Col md={2} sm={6} className="mb-3 d-flex justify-content-center">
@@ -127,18 +140,23 @@ const Footer = () => {
               </ul>
               <div className="d-flex justify-content-center ms-lg-5 mt-4">
                 <img src={fb} alt="fb" className="me-3" />
-                <img
-                  src={wp}
-                  alt="wp"
-                  width={50}
-                  height={50}
-                  className="mx-3 bg-success rounded-5"
-                />
+                <a
+                  href="https://wa.me/201066607106"
+                  target="_blank"
+                  rel="noopener noreferrer">
+                  <img
+                    src={wp}
+                    alt="wp"
+                    width={50}
+                    height={50}
+                    className="mx-3 bg-success rounded-5"
+                  />
+                </a>
                 <img src={ig} alt="ig" className="mx-3" />
               </div>
             </Col>
           </Row>
-        </Container>
+        </div>
       </footer>
     </div>
   );

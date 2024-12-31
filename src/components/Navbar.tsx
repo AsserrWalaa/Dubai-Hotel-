@@ -20,15 +20,15 @@ const AppNavbar: React.FC = () => {
   ];
 
   return (
-    <Navbar bg="transparent" expand="lg" className="shadow-none">
+    <Navbar bg="transparent" expand="lg" className="navShadow">
       <div className="container d-flex align-items-center justify-content-between">
         {/* Logo */}
         <Navbar.Brand as={Link} to="/">
           <img
             src={logo}
             alt="Logo"
-            width="120"
-            height="100"
+            width="100"
+            height="70"
             className="rounded-5 pe-5"
           />
         </Navbar.Brand>
@@ -45,7 +45,7 @@ const AppNavbar: React.FC = () => {
             <Nav.Link
               as={Link}
               to="/"
-              className={`fs-5 me-2 ${
+              className={`fs-6 me-2 ${
                 location.pathname === "/" ? "active" : ""
               }`}>
               Home
@@ -53,7 +53,7 @@ const AppNavbar: React.FC = () => {
             <Nav.Link
               as={Link}
               to="/services"
-              className={`fs-5 me-2 ${
+              className={`fs-6 me-2 ${
                 location.pathname === "/services" ? "active" : ""
               }`}>
               Service
@@ -61,7 +61,7 @@ const AppNavbar: React.FC = () => {
             <Nav.Link
               as={Link}
               to="/offers"
-              className={`fs-5 me-2 ${
+              className={`fs-6 me-2 ${
                 location.pathname === "/offers" ? "active" : ""
               }`}>
               Offers
@@ -69,7 +69,7 @@ const AppNavbar: React.FC = () => {
             <Nav.Link
               as={Link}
               to="/about"
-              className={`fs-5 me-2 ${
+              className={`fs-6 me-2 ${
                 location.pathname === "/about" ? "active" : ""
               }`}>
               About Us
@@ -77,7 +77,7 @@ const AppNavbar: React.FC = () => {
             <Nav.Link
               as={Link}
               to="/contact"
-              className={`fs-5 me-2 ${
+              className={`fs-6 me-2 ${
                 location.pathname === "/contact" ? "active" : ""
               }`}>
               Contact Us
@@ -88,7 +88,7 @@ const AppNavbar: React.FC = () => {
           <Nav>
             {/* Language Dropdown */}
             <NavDropdown
-              className="fs-5"
+              className="fs-6"
               title={<span>{selectedLanguage}</span>}
               menuVariant="light">
               {[
@@ -115,7 +115,7 @@ const AppNavbar: React.FC = () => {
 
             {/* Profile Dropdown */}
             <NavDropdown
-              className="fs-5 profile-dropdown no-arrow ms-lg-3"
+              className="fs-6 profile-dropdown no-arrow ms-lg-3"
               title={
                 <img
                   src={profile}

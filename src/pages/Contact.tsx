@@ -19,7 +19,7 @@ const ContactUS = () => (
     {/* Send Message Section */}
     <div className="d-flex justify-content-center align-items-center ">
       <div className="container">
-        <div className="rounded-3 shadow p-5 bg-white">
+        <div className="rounded-3 shadow-sm p-5 bg-white">
           {/* Form Section */}
           <div className="container col-lg-6 col-12 py-5 px-0 mx-auto">
             <h3 className="pb-4 text-center">Send Message</h3>

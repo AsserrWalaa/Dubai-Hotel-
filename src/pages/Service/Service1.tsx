@@ -42,7 +42,7 @@ const FirstService: React.FC = () => {
   return (
     <>
       {/* Apartment Sterilization Section */}
-      <section>
+      <section style={{ height: 800 }}>
         <Container>
           <Row className="pt-5 gap-3 gap-lg-0">
             {/* Left Content Section */}
@@ -105,7 +105,7 @@ const FirstService: React.FC = () => {
       </section>
 
       {/* Customer Reviews Section */}
-      <section className="container">
+      <section className="container h-100">
         <h4 className="d-flex justify-content-between align-items-center">
           Excerpts From Customers Reviews:
           <Link to="/customerReviews">

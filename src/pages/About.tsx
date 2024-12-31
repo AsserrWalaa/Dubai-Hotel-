@@ -38,7 +38,7 @@ const About = () => {
   return (
     <>
       <SecondaryHero />
-      <section className="container mt-5 h-100">
+      <section className="container mt-5 h-75">
         <div>
           <h5>1. Company Introduction: Objective, Vision, and Mission</h5>
           <p>

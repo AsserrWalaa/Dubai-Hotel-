@@ -1,0 +1,55 @@
+/* Default color for all nav links */
+#navbar2 {
+  .navbar-nav .nav-link {
+    color: #cfcfcf !important;
+    transition: color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Smooth transition for hover, active state, and scale */
+  }
+
+  /* Change color and add scale effect on hover */
+  .navbar-nav .nav-link:hover {
+    color: #fafafa !important;
+    transform: scale(1.1); /* Slightly scale up the link */
+    z-index: 1;
+  }
+
+  /* Change color for active/checked link */
+  .navbar-nav .nav-link.active {
+    color: white !important;
+    font-weight: bold !important; /* Optional: Make active links bold */
+  }
+
+  /* Target the dropdown toggle arrow and change it to white */
+  .navbar-nav .nav-link.dropdown-toggle::after {
+    color: #cfcfcf !important; /* Ensure the arrow color is white */
+    border-top-color: cfcfcf !important; /* Change the arrow's border color */
+    border-bottom-color: transparent !important; /* Hide the bottom border */
+    margin-left: 20px;
+  }
+  .navbar-nav .nav-link.dropdown-toggle::after:hover {
+    color: white !important;
+    background-color: white;
+  }
+
+  .custom-select-no-bg {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important; /* Optional: to remove any shadow */
+  }
+
+  /* nav profile */
+  .no-arrow .dropdown-toggle::after {
+    display: none !important;
+  }
+  .dropdown-item {
+    color: grey; /* Default color for unselected items */
+    font-weight: 500;
+    cursor: pointer;
+  }
+  .dropdown-item:hover {
+    color: #006f73 !important;
+  }
+  .dropdown-item.selected {
+    color: #006f73; /* Color for the selected item */
+    font-weight: bold; /* Optional: make the selected item bold */
+  }
+}

@@ -100,15 +100,15 @@ const Offers = () => {
       <HeroOffers />
       <section className="offers mt-5 h-100">
         <Container className="text-center">
-          <Row className="gap-4 justify-content-center mx-auto">
+          <Row className="gap-5 justify-content-center mx-auto">
             {offers.map((offer, index) => (
               <Col key={index} xs={12} sm={6} md={4} lg={3}>
                 <Card
-                  className="border-0 position-relative"
+                  className="border-0 position-relative text-start"
                   style={{ width: "18rem", background: "#FCFCFC" }}>
                   <div
-                    className="position-absolute top-0 end-0 text-white p-1 rounded-end"
-                    style={{ backgroundColor: "#F7712E" }}>
+                    className="position-absolute end-0 text-white p-1 rounded-end"
+                    style={{ backgroundColor: "#F7712E", top: "10px" }}>
                     Offer 10%
                   </div>
                   <Card.Img variant="top" src={offer.image} height={200} />

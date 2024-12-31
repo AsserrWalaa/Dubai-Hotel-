@@ -40,7 +40,7 @@ const SecondService: React.FC = () => {
   return (
     <>
       {/* Apartment Sterilization Section */}
-      <section>
+      <section style={{ height: 800 }}>
         <Container>
           <Row className="my-5 py-5 gap-3 gap-lg-0">
             {/* Left Section */}

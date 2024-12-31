@@ -7,7 +7,7 @@ const Hero = () => (
       <div className="hero-content">
         <Navbar />
         <div className="heroText container">
-          <h1 className="text-center text-white">Privacy&teams</h1>
+          <h1 className="text-center text-white py-5 my-5">Privacy & teams</h1>
         </div>
       </div>
     </div>

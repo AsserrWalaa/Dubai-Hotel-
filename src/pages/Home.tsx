@@ -17,6 +17,8 @@ import { Link } from "react-router-dom";
 
 // our service imports
 import star from "../assets/star.png";
+import arrow from "../assets/arrow.png";
+import arrowOrange from "../assets/arrowOrange.png";
 
 // our work section imports
 import bathroom from "../assets/bathroom.png";
@@ -225,8 +227,9 @@ const Home = () => (
                   <div className="position-absolute top-0 end-0 text-white p-1 fw-bold rounded-end">
                     <img src={star} alt="star" /> <span>{service.rating}</span>
                   </div>
-                  <h4 className="d-flex justify-content-center align-items-center mx-auto text-light mt-auto ">
+                  <h4 className="d-flex justify-content-center align-items-center mx-auto text-light mt-auto">
                     {service.name}
+                    <img src={arrow} alt="arrow" className="hover-arrow " />
                   </h4>
                 </div>
               </SwiperSlide>
@@ -242,9 +245,13 @@ const Home = () => (
                 <div className="position-absolute top-0 end-0 text-white p-1 fw-bold rounded-end">
                   <img src={star} alt="star" /> <span>{service.rating}</span>
                 </div>
-                <h4 className="d-flex justify-content-center align-items-center mx-auto text-light mt-auto pb-4">
+                <h4 className="d-flex justify-content-center align-items-center text-center mx-auto text-light mt-auto pb-4 serviceName">
                   {service.name}
                 </h4>
+                <div className="">
+                  <img src={arrow} alt="arrow" className="arrow-white" />
+                  <img src={arrowOrange} alt="arrow" className="arrowOrange" />
+                </div>
               </div>
             ))}
           </div>
@@ -380,7 +387,7 @@ const Home = () => (
     </section>
     {/* end of section */}
     {/* Client */}
-    <section className="my-5 ms-3 me-4">
+    <section className="my-5 ms-3 me-4 pt-5">
       <h3 className="text-center">What Our Client Say’s</h3>
       <div>
         <Swiper
@@ -431,8 +438,10 @@ const Home = () => (
         </Swiper>
 
         <div className="d-flex justify-content-center mt-5 w-100">
-          <Link to="customerReviews" className=" mx-auto">
-            <button className="text-dark fs-4 px-5 rounded-3 mx-auto bg-transparent borderOrange bookNow">
+          <Link to="customerReviews" className="mx-auto">
+            <button
+              className="text-dark fs-4 px-5 rounded-3 bg-transparent borderOrange bookNow "
+              style={{ width: 250 }}>
               View All
             </button>
           </Link>

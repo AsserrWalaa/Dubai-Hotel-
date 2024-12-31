@@ -16,7 +16,7 @@ const MyBooking: React.FC = () => {
     <>
       <Navbar />
       <section className="container my-5">
-        <h3 className="text-center">My Booking</h3>
+        <h3 className="text-center pb-3">My Booking</h3>
         <div className="mt-4"></div>
 
         {/* Tabs Section - Centering the tabs */}
@@ -25,9 +25,9 @@ const MyBooking: React.FC = () => {
             id="booking-tabs"
             activeKey={key}
             onSelect={(k) => setKey(k!)}
-            className="mb-3 d-flex gap- d-inline-block custom-tabs">
+            className="mb-3 d-flex d-inline-block custom-tabs">
             <Tab eventKey="pending" title="Pending" className="">
-              <div className="mt-4 w-100 col-10">
+              <div className="mt-4 w-100 col-12 ">
                 <Pending />
               </div>
             </Tab>

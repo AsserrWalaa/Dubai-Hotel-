@@ -1,5 +1,5 @@
 import React from "react";
-import SecondaryNav from "../components/SecondaryNav";
+import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../style/global.css";
 import { Form, Container, InputGroup } from "react-bootstrap";
@@ -9,7 +9,7 @@ import "@fortawesome/fontawesome-free/css/all.min.css";
 const Profile: React.FC = () => {
   return (
     <>
-      <SecondaryNav />
+      <Navbar />
       <section className="container my-5">
         <h1 className="text-center">Profile</h1>
         <Container className="mt-4">
