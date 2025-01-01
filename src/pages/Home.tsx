@@ -361,7 +361,7 @@ const Home = () => (
       </div>
     </section>
     {/* how it works */}
-    <div className="my-5 d-lg-block">
+    <div className="my-5 d-lg-block h-75">
       <div className="howWorks px-1 py-5">
         <h2 className="text-light text-center pt-5">How it Works</h2>
         <h5 className="text-light text-center pt-5 container">
@@ -399,12 +399,13 @@ const Home = () => (
           },
         }}>
         {offers.map((offer, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide
+            key={index}
+            className="d-flex justify-content-center align-items-center">
             <Card
               className="border-0 position-relative"
               style={{
                 width: "18rem",
-                margin: "auto",
                 background: "#FCFCFC",
               }}>
               <div
@@ -457,7 +458,7 @@ const Home = () => (
                 .toLowerCase()
                 .replace(" ", "")} position-relative`}
               style={{ minWidth: 350 }}>
-              <div className="position-absolute ms-3">
+              <div className="position-absolute ms-3 mx-auto">
                 <img src={says} alt="says" width={50} />
               </div>
               <div className="client px-4 p-1 rounded-3 my-3">
