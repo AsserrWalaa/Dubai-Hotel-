@@ -261,7 +261,7 @@ const Home = () => (
                       <img src={star} alt="star" />
                       <span>{service.rating}</span>
                     </div>
-                    <h4 className="d-flex justify-content-center align-items-center mx-auto text-light mt-auto ">
+                    <h4 className="d-flex justify-content-center align-items-center serviceName mx-auto text-light position-absolute bottom-0  ">
                       {service.name}
                     </h4>
                     <div>

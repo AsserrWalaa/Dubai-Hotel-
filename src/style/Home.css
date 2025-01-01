@@ -162,12 +162,6 @@
 .ourServices:hover .serviceName {
   padding-bottom: 80px !important;
 }
-.serviceName {
-  position: absolute;
-  bottom: 0;
-  width: 100%; /* Ensure it takes up the full width of the container */
-  padding-bottom: 20px; /* Optional: adds some padding at the bottom */
-}
 
 /* end our service section */
 
