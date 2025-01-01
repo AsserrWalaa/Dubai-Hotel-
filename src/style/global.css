@@ -52,6 +52,11 @@ body {
 .swiperHome {
   overflow: hidden;
 }
+.client {
+  width: 100%; /* Ensure the client card takes up the full width */
+  box-sizing: border-box; /* Ensures padding and margin don't affect the width */
+}
+
 /* Base styling for radio buttons */
 
 .check {

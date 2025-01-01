@@ -209,7 +209,7 @@
 }
 .swiperClient .swiper-wrapper {
   display: flex;
-  gap: 20px;
+  gap: 50px !important;
   overflow: hidden;
 }
 @media (max-width: 479px) {

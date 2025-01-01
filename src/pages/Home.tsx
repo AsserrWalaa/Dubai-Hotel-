@@ -261,7 +261,7 @@ const Home = () => (
                       <img src={star} alt="star" />
                       <span>{service.rating}</span>
                     </div>
-                    <h4 className="d-flex justify-content-center align-items-center mx-auto text-light mt-auto serviceName">
+                    <h4 className="d-flex justify-content-center align-items-center mx-auto text-light mt-auto ">
                       {service.name}
                     </h4>
                     <div>
@@ -388,29 +388,25 @@ const Home = () => (
         </h3>
       </div>
       <Swiper
-        slidesPerView={3} // Default slides per view
-        loop={true} // Enable looping
-        spaceBetween={50} // Default space between slides
+        slidesPerView={1} // Default: Single card
+        loop={true} // Enable infinite looping
+        spaceBetween={30} // Default space between slides
         className="my-5 swiperHome"
         breakpoints={{
           1024: {
-            slidesPerView: 3, // Desktop: 3 slides
-            spaceBetween: 50,
-          },
-          768: {
-            slidesPerView: 2, // Tablet: 2 slides
+            slidesPerView: 3, // Large screens: 3 cards
             spaceBetween: 30,
-          },
-          480: {
-            slidesPerView: 1, // Mobile: 1 slide
-            spaceBetween: 50,
           },
         }}>
         {offers.map((offer, index) => (
           <SwiperSlide key={index}>
             <Card
               className="border-0 position-relative"
-              style={{ width: "18rem", margin: "auto", background: "#FCFCFC" }}>
+              style={{
+                width: "18rem",
+                margin: "auto",
+                background: "#FCFCFC",
+              }}>
               <div
                 className="position-absolute top-0 end-0 text-white p-1 rounded-2"
                 style={{ backgroundColor: "#F7712E" }}>
@@ -444,22 +440,14 @@ const Home = () => (
       <h4 className="text-center">What Our Client Say’s</h4>
       <div className="container">
         <Swiper
-          slidesPerView={3} // Default slides per view
-          loop={true} // Enable looping
-          spaceBetween={50} // Default space between slides
+          slidesPerView={1} // Default: Single card
+          loop={true} // Enable infinite looping
+          spaceBetween={30} // Default space between slides
           className="my-5 swiperHome"
           breakpoints={{
             1024: {
-              slidesPerView: 3, // Desktop: 3 slides
-              spaceBetween: 50,
-            },
-            768: {
-              slidesPerView: 2, // Tablet: 2 slides
-              spaceBetween: 30,
-            },
-            480: {
-              slidesPerView: 1, // Mobile: 1 slide
-              spaceBetween: 50,
+              slidesPerView: 3, // Large screens: 3 cards
+              spaceBetween: 80,
             },
           }}>
           {clientTestimonials.map((client, index) => (
@@ -467,7 +455,8 @@ const Home = () => (
               key={index}
               className={`${client.name
                 .toLowerCase()
-                .replace(" ", "")} position-relative`}>
+                .replace(" ", "")} position-relative`}
+              style={{ minWidth: 350 }}>
               <div className="position-absolute ms-3">
                 <img src={says} alt="says" width={50} />
               </div>
@@ -493,6 +482,7 @@ const Home = () => (
             </SwiperSlide>
           ))}
         </Swiper>
+
         <div className="d-flex justify-content-center mt-5 w-100">
           <Link to="customerReviews" className="mx-auto">
             <button

@@ -100,45 +100,32 @@ const Surface: React.FC = () => {
           </Row>
         </Container>
       </section>
-
       {/* Customer Reviews Section */}
       <section className="container">
         <h4 className="colorPrimary">The Results of Our Service in Action :</h4>
         <Swiper
-          slidesPerView={3} // Default slides per view
-          loop={true} // Enable looping
-          spaceBetween={40} // Default space between slides
-          className="my-5 swiperHome container"
+          slidesPerView={1} // Default: Single card
+          loop={true} // Enable infinite looping
+          spaceBetween={30} // Default space between slides
+          className="my-5 swiperHome"
           breakpoints={{
             1024: {
-              slidesPerView: 3, // Desktop: 3 slides
-              spaceBetween: 50,
-            },
-            768: {
-              slidesPerView: 2, // Tablet: 2 slides
-              spaceBetween: 30,
-            },
-            480: {
-              slidesPerView: 1, // Mobile: 1 slide
-              spaceBetween: 30,
+              slidesPerView: 3, // Large screens: 3 cards
+              spaceBetween: 80,
             },
           }}>
           {cardData.map((card) => (
             <SwiperSlide key={card.id}>
               <Card
-                className="border-0 container position-relative"
+                className="border-0 position-relative"
                 style={{
                   width: "24rem",
                   margin: "auto",
                   background: "#FCFCFC",
                 }}>
                 <div className="d-flex flex-column flex-lg-row justify-content-center align-items-center w-auto">
-                  <img
-                    src={before}
-                    alt="before"
-                    className="w-75 mb-3 mb-lg-0"
-                  />
-                  <img src={after} alt="after" className="w-75" />
+                  <img src={before} alt="before" className=" mb-3 mb-lg-0" />
+                  <img src={after} alt="after" className="" />
                 </div>
                 <Card.Body className="container">
                   <Card.Text>
