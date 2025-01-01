@@ -28,8 +28,11 @@ import our4 from "../assets/our4.jpeg";
 import our5 from "../assets/our5.jpeg";
 import our6 from "../assets/our6.jpeg";
 
-// how it works imports
-import howWorks from "../assets/how works.png";
+// how work imports
+import how1 from "../assets/how1.png";
+import how2 from "../assets/how2.png";
+import how3 from "../assets/how3.png";
+import how4 from "../assets/how4.png";
 
 // offers section imports
 import layout from "../assets/window.jpeg";
@@ -49,41 +52,49 @@ const services = [
     name: "Home Cleaning",
     className: "home-claening",
     rating: "4.8",
+    link: "/homeCleaning",
   },
   {
     name: "Bathroom Cleaning",
     className: "bathroom-claening",
     rating: "4.8",
+    link: "/bathroom",
   },
   {
     name: "Kitchen Cleaning",
     className: "kitchen-claening",
     rating: "4.8",
+    link: "/kitchen",
   },
   {
     name: "Surface Cleaning",
     className: "surface-claening",
     rating: "4.8",
-  },
-  {
-    name: "Window Cleaning",
-    className: "window-claening",
-    rating: "4.8",
+    link: "/surface",
   },
   {
     name: "Upholstery Cleaning",
     className: "Upholstery",
     rating: "4.8",
+    link: "/upholstery",
+  },
+  {
+    name: "Window Cleaning",
+    className: "window-claening",
+    rating: "4.8",
+    link: "/window",
   },
   {
     name: "Room Layout and Furnishing",
     className: "roomLayout",
     rating: "4.8",
+    link: "/layout",
   },
   {
     name: "Apartment Perfuming",
     className: "perfuming",
     rating: "4.8",
+    link: "/perfuming",
   },
 ];
 
@@ -194,66 +205,96 @@ const Home = () => (
             peace of mind.
           </p>
         </div>
-        {/* pics */}
+      </div>
+      {/* pics */}
 
-        <div className="container col-12 ">
-          {/* For small screens, display as grid */}
-          <Swiper
-            slidesPerView={3} // Default slides per view (adjust this as needed)
-            loop={true} // Enable looping
-            spaceBetween={50} // Default space between slides
-            className="my-5 swiperHome d-lg-none gap-5"
-            breakpoints={{
-              1024: {
-                slidesPerView: 8, // Desktop: 8 slides
-                spaceBetween: 50,
-              },
-              768: {
-                slidesPerView: 4, // Tablet: 4 slides
-                spaceBetween: 30,
-              },
-              480: {
-                slidesPerView: 1, // Mobile: 1 slide per view
-                spaceBetween: 20, // Adjust the gap for mobile
-              },
-            }}>
-            {services.map((service, index) => (
-              <SwiperSlide key={index} className="gap-5">
+      <div className="container col-12 ">
+        {/* For small screens, display as grid */}
+        <Swiper
+          slidesPerView={1} // One slide per view by default for mobile (small screens)
+          loop={true} // Enable looping
+          spaceBetween={20} // Adjust the gap for mobile
+          className="my-5 swiperHome d-lg-none gap-5"
+          breakpoints={{
+            1024: {
+              slidesPerView: 8, // Desktop: 8 slides
+              spaceBetween: 50,
+            },
+            768: {
+              slidesPerView: 4, // Tablet: 4 slides
+              spaceBetween: 30,
+            },
+            480: {
+              slidesPerView: 1, // Mobile: 1 slide per view
+              spaceBetween: 20, // Adjust the gap for mobile
+            },
+          }}>
+          {services.map((service, index) => (
+            <SwiperSlide key={index} className="gap-5">
+              {/* Link added here */}
+              <Link to={service.link} className="text-decoration-none">
                 <div
                   className={`ourServices rounded-3 position-relative d-flex flex-column ${service.className}`}
-                  style={{ width: "18rem" }} // Similar to the Card layout
+                  style={{ width: "100%" }} // Make the width 100% to take full container width
                 >
                   <div className="position-absolute top-0 end-0 text-white p-1 fw-bold rounded-end">
                     <img src={star} alt="star" /> <span>{service.rating}</span>
                   </div>
                   <h4 className="d-flex justify-content-center align-items-center mx-auto text-light mt-auto">
                     {service.name}
-                    <img src={arrow} alt="arrow" className="hover-arrow " />
                   </h4>
                 </div>
-              </SwiperSlide>
-            ))}
-          </Swiper>
-
-          {/* For large screens, display as grid */}
-          <div className="gap-2 row justify-content-center align-items-center d-none d-lg-flex">
-            {services.map((service, index) => (
-              <div
-                key={index}
-                className={`ourServices d-flex rounded-3 position-relative col-sm-6 col-md-6 col-lg-3 ${service.className}`}>
-                <div className="position-absolute top-0 end-0 text-white p-1 fw-bold rounded-end">
-                  <img src={star} alt="star" /> <span>{service.rating}</span>
+              </Link>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+        {/* For large screens, display as grid */}
+        <div className="gap-2 row justify-content-center align-items-center d-none d-lg-flex">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className={`${service.className} ourServices d-flex rounded-3 position-relative col-12 col-sm-6 col-md-6 col-lg-3`}>
+              {service.link ? (
+                <Link to={service.link} className="text-decoration-none">
+                  <div className="">
+                    <div className="position-absolute top-0 end-0 text-white p-1 fw-bold rounded-end">
+                      <img src={star} alt="star" />
+                      <span>{service.rating}</span>
+                    </div>
+                    <h4 className="d-flex justify-content-center align-items-center mx-auto text-light mt-auto serviceName">
+                      {service.name}
+                    </h4>
+                    <div>
+                      <img src={arrow} alt="arrow" className="arrow-white" />
+                      <img
+                        src={arrowOrange}
+                        alt="arrow"
+                        className="arrowOrange"
+                      />
+                    </div>
+                  </div>
+                </Link>
+              ) : (
+                <div
+                  className={`ourServices d-flex rounded-3 position-relative ${service.className}`}>
+                  <div className="position-absolute top-0 end-0 text-white p-1 fw-bold rounded-end">
+                    <img src={star} alt="star" /> <span>{service.rating}</span>
+                  </div>
+                  <h4 className="d-flex justify-content-center align-items-center text-center mx-auto text-light mt-auto pb-4 serviceName">
+                    {service.name}
+                  </h4>
+                  <div>
+                    <img src={arrow} alt="arrow" className="arrow-white" />
+                    <img
+                      src={arrowOrange}
+                      alt="arrow"
+                      className="arrowOrange"
+                    />
+                  </div>
                 </div>
-                <h4 className="d-flex justify-content-center align-items-center text-center mx-auto text-light mt-auto pb-4 serviceName">
-                  {service.name}
-                </h4>
-                <div className="">
-                  <img src={arrow} alt="arrow" className="arrow-white" />
-                  <img src={arrowOrange} alt="arrow" className="arrowOrange" />
-                </div>
-              </div>
-            ))}
-          </div>
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </section>
@@ -320,14 +361,27 @@ const Home = () => (
       </div>
     </section>
     {/* how it works */}
-    <div className="howWorks px-1 py-5">
-      <img src={howWorks} alt="howWorks" className="w-100" />
+    <div className="my-5 d-lg-block">
+      <div className="howWorks px-1 py-5">
+        <h2 className="text-light text-center pt-5">How it Works</h2>
+        <h5 className="text-light text-center pt-5 container">
+          "Discover how our service works in four simple steps: choose your
+          service, set your schedule, confirm your booking, and enjoy a
+          professional hotel-like experience
+        </h5>
+        <div className="d-flex howWorkScroll container mt-5 ">
+          <img src={how1} alt="how1" className="h-25" />
+          <img src={how2} alt="how2" className="h-25" />
+          <img src={how3} alt="how3" className="h-25" />
+          <img src={how4} alt="how4" className="h-25" />
+        </div>
+      </div>
     </div>
 
     {/* end of section */}
     {/* Our offers*/}
     {/* end of section */}
-    <section className="container">
+    <section className="container p-5">
       <div>
         <h3 className="text-center">
           Our exclusive offers for hotel services and furnished apartments
@@ -356,7 +410,7 @@ const Home = () => (
           <SwiperSlide key={index}>
             <Card
               className="border-0 position-relative"
-              style={{ width: "18rem", margin: "auto" }}>
+              style={{ width: "18rem", margin: "auto", background: "#FCFCFC" }}>
               <div
                 className="position-absolute top-0 end-0 text-white p-1 rounded-2"
                 style={{ backgroundColor: "#F7712E" }}>
@@ -387,21 +441,25 @@ const Home = () => (
     {/* end of section */}
     {/* Client */}
     <section className="my-5 ms-3 me-4 pt-5">
-      <h3 className="text-center">What Our Client Say’s</h3>
-      <div>
+      <h4 className="text-center">What Our Client Say’s</h4>
+      <div className="container">
         <Swiper
-          slidesPerView={3} // Default slides per view for wide screens
+          slidesPerView={3} // Default slides per view
           loop={true} // Enable looping
-          spaceBetween={30} // Default space between slides
-          className="my-5 swiperHome container"
+          spaceBetween={50} // Default space between slides
+          className="my-5 swiperHome"
           breakpoints={{
             1024: {
-              slidesPerView: 2, // Wide screens: 2 slides
-              spaceBetween: 20,
+              slidesPerView: 3, // Desktop: 3 slides
+              spaceBetween: 50,
             },
             768: {
-              slidesPerView: 1, // Small screens: 1 slide
-              spaceBetween: 20,
+              slidesPerView: 2, // Tablet: 2 slides
+              spaceBetween: 30,
+            },
+            480: {
+              slidesPerView: 1, // Mobile: 1 slide
+              spaceBetween: 50,
             },
           }}>
           {clientTestimonials.map((client, index) => (
@@ -435,7 +493,6 @@ const Home = () => (
             </SwiperSlide>
           ))}
         </Swiper>
-
         <div className="d-flex justify-content-center mt-5 w-100">
           <Link to="customerReviews" className="mx-auto">
             <button

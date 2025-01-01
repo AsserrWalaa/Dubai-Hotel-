@@ -7,7 +7,7 @@ const PrivacyAndTerms = () => {
   return (
     <>
       <SecondaryHero />
-      <section className="container mt-5 h-100">
+      <section className="container mt-5 h-100 pb-5 mb-5">
         <div>
           <h5 className="textOrange">Privacy Policy</h5>
           <div className="my-3">

@@ -40,7 +40,7 @@ const SecondService: React.FC = () => {
   return (
     <>
       {/* Apartment Sterilization Section */}
-      <section style={{ height: 800 }}>
+      <section>
         <Container>
           <Row className="my-5 py-5 gap-3 gap-lg-0">
             {/* Left Section */}
@@ -126,7 +126,7 @@ const SecondService: React.FC = () => {
               />
               <div>
                 <h6 className="mb-1">{client.name}</h6>
-                <span className="text-warning mx-3 fs-4">
+                <span className="text-warning fs-4">
                   {"★".repeat(client.rating)}
                   {"☆".repeat(5 - client.rating)}
                 </span>

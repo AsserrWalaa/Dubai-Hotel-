@@ -45,20 +45,38 @@ const CustomerReview: React.FC = () => {
       <SecondaryHero />
       <section>
         <div className="d-flex container py-5 ">
-          <div className="d-flex w-100 gap-5">
-            <div className="w-100">
+          <div className="d-flex w-100 gap-5 progressBack">
+            <div className="w-100 ">
               <ol>
                 <li className="my-3">
-                  <ProgressBar className="custom-progress-bar" now={40} />
+                  <ProgressBar
+                    className="custom-progress-bar gray-background"
+                    now={40}
+                  />
                 </li>
                 <li className="my-3">
-                  <ProgressBar className="custom-progress-bar" now={60} />
+                  <ProgressBar
+                    className="custom-progress-bar gray-background"
+                    now={40}
+                  />
                 </li>
                 <li className="my-3">
-                  <ProgressBar className="custom-progress-bar" now={80} />
+                  <ProgressBar
+                    className="custom-progress-bar gray-background"
+                    now={40}
+                  />
                 </li>
                 <li className="my-3">
-                  <ProgressBar className="custom-progress-bar" now={100} />
+                  <ProgressBar
+                    className="custom-progress-bar gray-background"
+                    now={40}
+                  />
+                </li>
+                <li className="my-3">
+                  <ProgressBar
+                    className="custom-progress-bar gray-background"
+                    now={40}
+                  />
                 </li>
               </ol>
             </div>

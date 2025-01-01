@@ -1,5 +1,5 @@
 // src/pages/Home.tsx
-import Navbar from "../../components/Navbar";
+import Navbar from "../../components/SecondaryHero";
 import "../../style/global.css";
 const Hero = () => (
   <>

@@ -72,7 +72,7 @@ const Service = () => {
         </div>
 
         {/* Dynamic Content Section */}
-        <div className="">
+        <div>
           {selectedOption === "option1" && <Service1 />}
           {selectedOption === "option2" && <Service2 />}
           {selectedOption === "option3" && <Service3 />}

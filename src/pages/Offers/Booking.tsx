@@ -1,5 +1,6 @@
 import React from "react";
 import SecondaryNav from "../../components/Navbar";
+import Footer from "../../components/Footer";
 import "../../style/global.css";
 import { Form, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
@@ -23,13 +24,13 @@ const Booking: React.FC = () => {
               <Form.Label>First Name</Form.Label>
               <div className="position-relative">
                 <FiUserPlus
-                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-3"
+                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-1  "
                   style={{ pointerEvents: "none" }}
                 />
                 <Form.Control
                   type="text"
                   placeholder="First Name"
-                  className="ps-5 borderPrimary rounded-2"
+                  className="ps-4 borderPrimary rounded-2"
                 />
               </div>
             </Form.Group>
@@ -38,13 +39,13 @@ const Booking: React.FC = () => {
               <Form.Label>Phone Number</Form.Label>
               <div className="position-relative">
                 <MdOutlinePhoneInTalk
-                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-3"
+                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-1"
                   style={{ pointerEvents: "none" }}
                 />
                 <Form.Control
                   type="text"
                   placeholder="Phone Number"
-                  className="ps-5 borderPrimary rounded-2"
+                  className="ps-4 borderPrimary rounded-2"
                 />
               </div>
             </Form.Group>
@@ -53,13 +54,13 @@ const Booking: React.FC = () => {
               <Form.Label>City</Form.Label>
               <div className="position-relative">
                 <CiLocationOn
-                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-3"
+                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-1"
                   style={{ pointerEvents: "none" }}
                 />
                 <Form.Control
                   type="text"
                   placeholder="City"
-                  className="ps-5 borderPrimary rounded-2"
+                  className="ps-4 borderPrimary rounded-2"
                 />
               </div>
             </Form.Group>
@@ -68,10 +69,10 @@ const Booking: React.FC = () => {
               <Form.Label>Service Type</Form.Label>
               <div className="position-relative">
                 <GoNote
-                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-3"
+                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-1"
                   style={{ pointerEvents: "none" }}
                 />
-                <Form.Select className="ps-5 icon-placeholder borderPrimary rounded-2">
+                <Form.Select className="ps-4 icon-placeholder borderPrimary rounded-2 ps-4">
                   <option value="" disabled selected>
                     Service Type
                   </option>
@@ -86,11 +87,11 @@ const Booking: React.FC = () => {
               <Form.Label>Service Date</Form.Label>
               <div className="position-relative">
                 <MdOutlineCalendarMonth
-                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-3"
+                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-1"
                   style={{ pointerEvents: "none" }}
                 />
                 <Form.Control
-                  className="ps-5 icon-placeholder borderPrimary rounded-2"
+                  className="ps-4 icon-placeholder borderPrimary rounded-2 ps-4"
                   placeholder="Service Date"
                   style={{
                     appearance: "none",
@@ -106,12 +107,12 @@ const Booking: React.FC = () => {
               <div className="position-relative">
                 {/* Clock Icon */}
                 <CiClock2
-                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-3"
+                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-1"
                   style={{ pointerEvents: "none" }}
                 />
                 {/* Time Input */}
                 <Form.Control
-                  className="ps-5 icon-placeholder borderPrimary rounded-2"
+                  className="ps-4 icon-placeholder borderPrimary rounded-2 ps-4"
                   placeholder="Select Time"
                   style={{
                     appearance: "none",
@@ -127,13 +128,13 @@ const Booking: React.FC = () => {
               <div className="position-relative">
                 {/* Home Icon */}
                 <IoHomeOutline
-                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-3"
+                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-1"
                   style={{ pointerEvents: "none" }}
                 />
                 {/* Address Input */}
                 <Form.Control
                   type="text"
-                  className="ps-5 icon-placeholder borderPrimary rounded-2"
+                  className="ps-4 icon-placeholder borderPrimary rounded-2 ps-4"
                   placeholder="Address"
                 />
               </div>
@@ -144,14 +145,14 @@ const Booking: React.FC = () => {
               <div className="position-relative">
                 {/* Message Detail Icon */}
                 <BiMessageDetail
-                  className="position-absolute t start-0 translate-middle-y text-muted ms-3"
+                  className="position-absolute t start-0 translate-middle-y text-muted ms-1"
                   style={{ pointerEvents: "none", top: 20 }}
                 />
                 {/* Notes Textarea */}
                 <Form.Control
                   as="textarea"
                   rows={3}
-                  className="ps-5 icon-placeholder borderPrimary rounded-2"
+                  className="ps-4 icon-placeholder borderPrimary rounded-2 ps-4"
                   placeholder="Notes"
                 />
               </div>
@@ -164,6 +165,7 @@ const Booking: React.FC = () => {
           </button>
         </Link>
       </section>
+      <Footer />
     </>
   );
 };

@@ -42,6 +42,16 @@ body {
 /* End Heros */
 
 /* start services */
+.serviceOne {
+  height: auto;
+}
+.swiperHome .swiper-wrapper {
+  display: flex;
+  gap: 10px;
+}
+.swiperHome {
+  overflow: hidden;
+}
 /* Base styling for radio buttons */
 
 .check {
@@ -83,9 +93,19 @@ body {
   border: 1px #006f73 solid !important;
 }
 /* customer review  */
-.custom-progress-bar .progress-bar {
-  background-color: #f7712e;
+.gray-background .progress-bar {
+  background-color: #f7712e !important;
 }
+.custom-progress-bar {
+  height: 8px !important;
+}
+.gray-background {
+  background-color: #bebebe !important;
+}
+.progressBack {
+  background-color: #fcfcfc;
+}
+
 .star {
   color: #ccc; /* Empty stars */
   cursor: pointer;
@@ -151,4 +171,36 @@ body {
 }
 .nav-link:hover {
   color: #006f73 !important;
+}
+.bookingImage {
+  height: auto; /* Default height for smaller screens */
+}
+
+@media (min-width: 992px) {
+  .bookingImage {
+    height: 20px;
+  }
+}
+@media (min-width: 992px) {
+  .bookingCard {
+    height: 280px;
+  }
+}
+
+/* services pages */
+/* services pages */
+/* service 1 */ /* Ensure proper height adjustments for small screens */
+@media (max-width: 576px) {
+  .serviceOne {
+    min-height: auto; /* Allow content to determine the height on small screens */
+    padding-bottom: 2rem; /* Add extra padding for spacing */
+  }
+
+  .client-review {
+    margin-bottom: 1rem; /* Adjust margins for smaller screens */
+  }
+
+  .button {
+    font-size: 1rem; /* Make button text more readable */
+  }
 }

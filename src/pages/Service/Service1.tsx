@@ -10,7 +10,7 @@ import c3 from "../../assets/c3.png";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-
+import "../../style/global.css";
 // Testimonials Data
 const clientTestimonials = [
   {
@@ -42,8 +42,8 @@ const FirstService: React.FC = () => {
   return (
     <>
       {/* Apartment Sterilization Section */}
-      <section style={{ height: 800 }}>
-        <Container>
+      <section className="serviceOne">
+        <Container className="">
           <Row className="pt-5 gap-3 gap-lg-0">
             {/* Left Content Section */}
             <Col lg={6} xs={10} className="left ">
@@ -92,6 +92,11 @@ const FirstService: React.FC = () => {
                     <h6>2. Cleaning Glass and Mirrors:</h6>
                     Mix warm water with white vinegar (1:1 ratio).
                   </li>
+                  <li className="pt-3">
+                    <h6>3. Floor Cleaning:</h6>
+                    Mix warm water with a little lemon juice and baking soda,
+                    then mop the floors
+                  </li>
                 </ul>
               </div>
             </Col>
@@ -105,7 +110,7 @@ const FirstService: React.FC = () => {
       </section>
 
       {/* Customer Reviews Section */}
-      <section className="container h-100">
+      <div className="container h-100">
         <h4 className="d-flex justify-content-between align-items-center">
           Excerpts From Customers Reviews:
           <Link to="/customerReviews">
@@ -141,7 +146,7 @@ const FirstService: React.FC = () => {
             Book Now
           </button>
         </Link>
-      </section>
+      </div>
     </>
   );
 };

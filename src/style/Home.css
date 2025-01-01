@@ -120,8 +120,8 @@
 }
 .arrow-white,
 .arrowOrange {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   display: none; /* Hidden by default */
   position: absolute;
   bottom: 25px;
@@ -130,44 +130,64 @@
   z-index: 100;
   pointer-events: none; /* Prevent the arrow from interfering with hover */
   border-radius: 50px;
+  transition: display 0.3s ease-in-out; /* Smooth transition (optional) */
 }
+
 .arrow-white {
   background-color: #f7712e;
   border: #f7712e;
 }
+
 .arrowOrange {
   background-color: white;
   border-radius: 50px;
 }
-/* Show the arrow when hovering over the .ourServices container */
+
+/* Show the arrow-white when hovering over the .ourServices container */
 .ourServices:hover .arrow-white {
-  display: block; /* Show the arrow when hovering over .ourServices */
+  display: block;
+  pointer-events: auto; /* Allow interaction with the arrow */
 }
-/* Hide the arrow when hovering over the arrow itself */
+
+/* Hide the arrow-white and show the arrowOrange when hovering over .arrow-white */
 .arrow-white:hover {
-  display: none !important; /* Hide the arrow when hovering over the arrow */
+  display: none; /* Hide the arrow-white */
 }
-.arrow-white:hover .arrowOrange {
-  display: block; /* Make .arrowOrange visible on hover */
+
+.arrow-white:hover + .arrowOrange {
+  display: block; /* Show the arrowOrange */
+  pointer-events: auto; /* Allow interaction with the arrow */
 }
+
 .ourServices:hover .serviceName {
   padding-bottom: 80px !important;
+}
+.serviceName {
+  position: absolute;
+  bottom: 0;
+  width: 100%; /* Ensure it takes up the full width of the container */
+  padding-bottom: 20px; /* Optional: adds some padding at the bottom */
 }
 
 /* end our service section */
 
 /* how it works */
 
-.howWorks img {
+.howWorks {
+  height: 100vh; /* Full height of the viewport */
   background: linear-gradient(
     180deg,
-    rgba(133, 53, 0, 0.884),
-    rgb(248, 83, 0),
-    rgba(51, 51, 51, 0.966),
-    rgba(45, 148, 151, 0.897)
+    rgba(121, 47, 10, 0.959) 0%,
+    rgba(201, 73, 9, 0.966) 26.15%,
+    rgba(7, 158, 163, 0.986) 98.71%,
+    rgba(11, 119, 122, 0.884) 98.71%
   );
 }
-
+.howWorkScroll {
+  overflow-x: auto !important; /* Allows horizontal scrolling */
+  white-space: nowrap; /* Ensures content does not wrap */
+  scrollbar-width: none; /* Optional: Makes scrollbar thinner */
+}
 /* offers */
 
 .swiperHome .swiper-wrapper {

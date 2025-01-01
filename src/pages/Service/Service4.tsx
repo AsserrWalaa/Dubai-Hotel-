@@ -193,7 +193,7 @@ const FourthService: React.FC = () => {
               />
               <div>
                 <h6 className="mb-1">{client.name}</h6>
-                <span className="text-warning mx-3 fs-4">
+                <span className="text-warning fs-4">
                   {"★".repeat(client.rating)}
                   {"☆".repeat(5 - client.rating)}
                 </span>

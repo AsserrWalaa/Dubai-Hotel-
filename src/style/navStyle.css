@@ -55,6 +55,23 @@
   color: #006f73; /* Color for the selected item */
   font-weight: bold; /* Optional: make the selected item bold */
 }
-.navShadow {
+.navOne {
   box-shadow: 0 1px hsl(0, 4%, 95%);
+  height: 70px;
+  height: auto; /* Default height */
+}
+
+/* Media query for width 992px and above */
+@media (min-width: 992px) {
+  .navOne {
+    height: 70px; /* Fixed height for larger screens */
+    display: flex;
+    align-items: center; /* Vertically center content */
+  }
+
+  .navOne .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space between logo and nav items */
+  }
 }

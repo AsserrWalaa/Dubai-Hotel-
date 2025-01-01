@@ -20,7 +20,7 @@ const AppNavbar: React.FC = () => {
   ];
 
   return (
-    <Navbar bg="transparent" expand="lg" className="navShadow">
+    <Navbar bg="transparent" expand="lg" className="navOne">
       <div className="container d-flex align-items-center justify-content-between">
         {/* Logo */}
         <Navbar.Brand as={Link} to="/">

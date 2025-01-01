@@ -12,6 +12,14 @@ import Privacy from "../pages/PrivacyAndTerms";
 import Reviews from "../pages/CustomerReview";
 import Profile from "../pages/Profile";
 import MyBooking from "../pages/MyBooking/myBooking";
+import HomeCleaning from "../pages/EightService/HomeCleaning";
+import BathroomCleaning from "../pages/EightService/Bathroom";
+import KitchenCleaning from "../pages/EightService/Kitchen";
+import SurfaceCleaning from "../pages/EightService/Surface";
+import Upholstery from "../pages/EightService/Upholstery";
+import Window from "../pages/EightService/Window";
+import Layout from "../pages/EightService/Layout";
+import Perfuming from "../pages/EightService/Perfuming";
 
 const AppRoutes = () => (
   <Router>
@@ -28,6 +36,14 @@ const AppRoutes = () => (
       <Route path="/customerReviews" element={<Reviews />} />
       <Route path="/myProfile" element={<Profile />} />
       <Route path="/myBooking" element={<MyBooking />} />
+      <Route path="/homeCleaning" element={<HomeCleaning />} />
+      <Route path="/bathroom" element={<BathroomCleaning />} />
+      <Route path="/kitchen" element={<KitchenCleaning />} />
+      <Route path="/surface" element={<SurfaceCleaning />} />
+      <Route path="/upholstery" element={<Upholstery />} />
+      <Route path="/window" element={<Window />} />
+      <Route path="/layout" element={<Layout />} />
+      <Route path="/perfuming" element={<Perfuming />} />
     </Routes>
   </Router>
 );

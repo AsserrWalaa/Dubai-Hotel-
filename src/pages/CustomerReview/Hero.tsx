@@ -7,7 +7,7 @@ const Hero = () => (
       <div className="hero-content">
         <Navbar />
         <div className="heroText container">
-          <h1 className="text-center text-white">Customer Review</h1>
+          <h1 className="text-center text-white mt-5 pt-5">Customer Review</h1>
         </div>
       </div>
     </div>

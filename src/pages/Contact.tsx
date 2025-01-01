@@ -17,7 +17,7 @@ const ContactUS = () => (
       <h1 className="text-center text-white ">Contact Us</h1>
     </div>
     {/* Send Message Section */}
-    <div className="d-flex justify-content-center align-items-center ">
+    <div className="d-flex justify-content-center align-items-center my-5 pb-5">
       <div className="container">
         <div className="rounded-3 shadow-sm p-5 bg-white">
           {/* Form Section */}
