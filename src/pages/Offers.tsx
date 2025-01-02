@@ -99,12 +99,12 @@ const Offers = () => {
     <>
       <HeroOffers />
       <section className="offers mt-5 h-100">
-        <Container className="text-center">
-          <Row className="gap-5 justify-content-center mx-auto">
+        <Container className="text-center mb-5">
+          <Row className="gap-5 justify-content-center mx-auto ">
             {offers.map((offer, index) => (
               <Col key={index} xs={12} sm={6} md={4} lg={3}>
                 <Card
-                  className="border-0 position-relative text-start"
+                  className="border-0 position-relative text-start mb-5"
                   style={{ width: "18rem", background: "#FCFCFC" }}>
                   <div
                     className="position-absolute end-0 text-white p-1 rounded-end"

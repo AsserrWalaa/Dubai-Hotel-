@@ -5,6 +5,10 @@ import "../style/global.css";
 import { Form, Container, InputGroup } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
+import { FiUserPlus } from "react-icons/fi";
+import { MdOutlinePhoneInTalk } from "react-icons/md";
+import { MdEmail } from "react-icons/md";
+import { TbLockPassword } from "react-icons/tb";
 
 const Profile: React.FC = () => {
   return (
@@ -15,60 +19,64 @@ const Profile: React.FC = () => {
         <Container className="mt-4">
           <Form>
             {/* Full Name */}
-            <Form.Group className="position-relative my-5">
+            <Form.Group className="position-relative my-5 ">
               <Form.Label>Full Name</Form.Label>
-              <Form.Control
-                type="text"
-                placeholder="  Full Name"
-                className="icon-placeholder borderOrange"
-              />
+              <div className="position-relative">
+                <FiUserPlus
+                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-1  "
+                  style={{ pointerEvents: "none" }}
+                />
+                <Form.Control
+                  type="text"
+                  placeholder="Full Name"
+                  className="ps-4 borderOrange rounded-2"
+                />
+              </div>
             </Form.Group>
-
             {/* Email Address */}
             <Form.Group className="position-relative my-5">
               <Form.Label>Email Address</Form.Label>
-              <Form.Control
-                type="email"
-                placeholder="   Email Address"
-                className="icon-placeholder borderOrange"
-              />
+              <div className="position-relative">
+                <MdEmail
+                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-1"
+                  style={{ pointerEvents: "none" }}
+                />
+                <Form.Control
+                  type="email"
+                  placeholder="Email Address"
+                  className="ps-4 borderOrange rounded-2"
+                />
+              </div>
             </Form.Group>
-
             {/* Phone Number */}
             <Form.Group className="position-relative my-5">
               <Form.Label>Phone Number</Form.Label>
-              <InputGroup className="gap-2">
-                {/* Country Code */}
-                <InputGroup.Text className="borderOrange d-flex  align-items-center p-1 rounded">
-                  <img
-                    src="https://flagcdn.com/w40/ae.png" // UAE flag URL
-                    alt="UAE Flag"
-                    style={{
-                      width: "20px",
-                      height: "15px",
-                      marginRight: "5px",
-                    }}
-                  />
-                  +971 {/* Example country code */}
-                </InputGroup.Text>
-
-                {/* Phone Number */}
-                <Form.Control
-                  type="number"
-                  placeholder="&#xf095; Phone Number"
-                  className="icon-placeholder borderOrange rounded"
+              <div className="position-relative">
+                <MdOutlinePhoneInTalk
+                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-1"
+                  style={{ pointerEvents: "none" }}
                 />
-              </InputGroup>
+                <Form.Control
+                  type="text"
+                  placeholder="Phone Number"
+                  className="ps-4 borderOrange rounded-2"
+                />
+              </div>
             </Form.Group>
-
             {/* Password */}
             <Form.Group className="position-relative my-5">
               <Form.Label>Password</Form.Label>
-              <Form.Control
-                type="password"
-                placeholder=" Password"
-                className="icon-placeholder borderOrange"
-              />
+              <div className="position-relative">
+                <TbLockPassword
+                  className="position-absolute top-50 start-0 translate-middle-y text-muted ms-1"
+                  style={{ pointerEvents: "none" }}
+                />
+                <Form.Control
+                  type="password"
+                  placeholder="Password"
+                  className="ps-4 borderOrange rounded-2"
+                />
+              </div>
             </Form.Group>
           </Form>
         </Container>
