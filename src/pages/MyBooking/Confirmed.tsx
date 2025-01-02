@@ -48,9 +48,9 @@ const Confirmed: React.FC = () => {
           />
 
           {/* Booking Details and Button */}
-          <div className="d-flex flex-column flex-lg-row justify-content-between py-2 w-100">
+          <div className="d-flex flex-column flex-lg-row justify-content-between py-2 w-100 container mx-3 ms-lg-0">
             {/* Booking Details */}
-            <div className="d-flex flex-column justify-content-between pe-lg-5 ps-1">
+            <div className="d-flex flex-column justify-content-between pe-lg-5 text-start ">
               <h6 className="my-1">
                 ID : <span className="text-secondary">{booking.id}</span>
               </h6>
@@ -79,7 +79,7 @@ const Confirmed: React.FC = () => {
 
             {/* Cancel Button */}
             <div className="d-flex align-items-center justify-content-center mt-auto mb-2 ps-lg-5 pe-3">
-              <button className="button text-danger btn w-100 px-3 rounded text-light mb-1">
+              <button className="button text-danger me-lg-0 me-3 my-lg-0 my-3 btn w-100 px-3 rounded text-light mb-1">
                 Cancel Booking
               </button>
             </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import Apartment1 from "../../assets/offersDetails.png";
+import Apartment1 from "../../assets/hc.png";
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
@@ -55,7 +55,7 @@ const HomeCleaning: React.FC = () => {
         <Container>
           <Row className="pt-5 gap-3 gap-lg-0 h-50">
             {/* Left Content Section */}
-            <Col lg={6} xs={10} className="left">
+            <Col lg={6} xs={10} className="left order-last order-lg-first">
               <h3 className="service-text">Home Cleaning</h3>
               <div>
                 <h5 className="mt-3">Description :</h5>
@@ -94,11 +94,14 @@ const HomeCleaning: React.FC = () => {
               </div>
             </Col>
             {/* Right Section */}
-            <Col lg={6} xs={10} className="right text-center">
+            <Col
+              lg={6}
+              xs={10}
+              className="right text-center order-1 order-lg-2 d-flex justify-content-center ">
               <img
                 src={Apartment1}
                 alt="Apartment1"
-                className="img-fluid h-75"
+                className="img-fluid h-75 mx-5"
               />
             </Col>
           </Row>
@@ -106,7 +109,7 @@ const HomeCleaning: React.FC = () => {
       </section>
 
       {/* Customer Reviews Section */}
-      <section className="container">
+      <section className="container mt-5">
         <h4 className="colorPrimary">The Results of Our Service in Action :</h4>
         <Swiper
           slidesPerView={1} // Default: Single card

@@ -50,12 +50,12 @@ const Bathroom: React.FC = () => {
   return (
     <>
       <Navbar />
-      {/* Apartment Sterilization Section */}
+      {/* bathroomSection */}
       <section className="serviceOne">
         <Container>
           <Row className="pt-5 gap-3 gap-lg-0 h-50">
             {/* Left Content Section */}
-            <Col lg={6} xs={10} className="left">
+            <Col lg={6} xs={10} className="left order-2 order-lg-1">
               <h3 className="service-text">Bathroom Cleaning</h3>
               <div>
                 <h5 className="my-3">Description :</h5>
@@ -70,7 +70,7 @@ const Bathroom: React.FC = () => {
                 </p>
 
                 <p className="fs-5 text-secondary my-3">
-                  Removing limescale and stubborn stains from tiles and walls
+                  Removing limescale and stubborn stains from tiles and walls.
                 </p>
 
                 <p className="fs-5 text-secondary my-3">
@@ -92,11 +92,14 @@ const Bathroom: React.FC = () => {
               </div>
             </Col>
             {/* Right Section */}
-            <Col lg={6} xs={10} className="right text-center">
+            <Col
+              lg={6}
+              xs={10}
+              className="right text-center order-1 order-lg-2 d-flex justify-content-center ">
               <img
                 src={Apartment1}
                 alt="Apartment1"
-                className="img-fluid h-75"
+                className="img-fluid h-75 mx-5"
               />
             </Col>
           </Row>
@@ -104,7 +107,7 @@ const Bathroom: React.FC = () => {
       </section>
 
       {/* Customer Reviews Section */}
-      <section className="container">
+      <section className="container mt-3">
         <h4 className="colorPrimary">The Results of Our Service in Action :</h4>
         <Swiper
           slidesPerView={3} // Default slides per view

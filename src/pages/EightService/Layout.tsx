@@ -55,7 +55,7 @@ const Layout: React.FC = () => {
         <Container>
           <Row className="pt-5 gap-3 gap-lg-0 h-50">
             {/* Left Content Section */}
-            <Col lg={6} xs={10} className="left">
+            <Col lg={6} xs={10} className="left order-2 order-lg-1">
               <h3 className="service-text">Room Layout and Furnishing</h3>
               <div>
                 <h5 className="my-3">Description :</h5>
@@ -65,7 +65,7 @@ const Layout: React.FC = () => {
                 </p>
 
                 <p className="fs-5 text-secondary my-3">
-                  Rearranging furniture for aesthetic and functional balance .
+                  Rearranging furniture for aesthetic and functional balance.
                 </p>
 
                 <p className="fs-5 text-secondary my-3">
@@ -74,27 +74,29 @@ const Layout: React.FC = () => {
 
                 <p className="fs-5 text-secondary my-3">
                   Enhancing lighting and distribution to improve the living
-                  experience .
+                  experience.
                 </p>
                 <p className="fs-5 text-secondary my-3">
                   Rearranging furniture to optimize space utilization.
                 </p>
                 <p className="fs-5 text-secondary my-3">
                   Adding decorative touches like cushions or flowers for a
-                  luxurious feel .
+                  luxurious feel.
                 </p>
                 <p className="fs-5 text-secondary">
-                  Choosing appropriate lighting to enhance the overall ambiance
-                  .
+                  Choosing appropriate lighting to enhance the overall ambiance.
                 </p>
               </div>
             </Col>
             {/* Right Section */}
-            <Col lg={6} xs={10} className="right text-center">
+            <Col
+              lg={6}
+              xs={10}
+              className="right text-center order-1 order-lg-2 d-flex justify-content-center ">
               <img
                 src={Apartment1}
                 alt="Apartment1"
-                className="img-fluid h-75"
+                className="img-fluid h-75 mx-5"
               />
             </Col>
           </Row>

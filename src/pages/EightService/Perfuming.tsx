@@ -50,12 +50,12 @@ const Perfuming: React.FC = () => {
   return (
     <>
       <Navbar />
-      {/* Apartment Sterilization Section */}
+      {/* Apartment Perfuming Section */}
       <section className="serviceOne">
         <Container>
-          <Row className="pt-5 gap-3 gap-lg-0 ">
+          <Row className="pt-5 gap-3 gap-lg-0">
             {/* Left Content Section */}
-            <Col lg={6} xs={10} className="left">
+            <Col lg={6} xs={10} className="left order-2 order-lg-1">
               <h3 className="service-text">Apartment Perfuming</h3>
               <div>
                 <h5 className="my-3">Description :</h5>
@@ -73,26 +73,29 @@ const Perfuming: React.FC = () => {
                 </p>
 
                 <p className="fs-5 text-secondary my-3">
-                  Scenting upholstery and curtains to enhance the ambiance .
+                  Scenting upholstery and curtains to enhance the ambiance.
                 </p>
                 <p className="fs-5 text-secondary my-3">
-                  Selecting fragrances that create a relaxing .
+                  Selecting fragrances that create a relaxing atmosphere.
                 </p>
                 <p className="fs-5 text-secondary my-3">
                   Perfuming upholstery and curtains to elevate the overall
-                  ambiance .
+                  ambiance.
                 </p>
                 <p className="fs-5 text-secondary">
-                  Evenly distributing scents throughout the apartment .
+                  Evenly distributing scents throughout the apartment.
                 </p>
               </div>
             </Col>
             {/* Right Section */}
-            <Col lg={6} xs={10} className="right text-center">
+            <Col
+              lg={6}
+              xs={10}
+              className="right text-center order-1 order-lg-2 d-flex justify-content-center ">
               <img
                 src={Apartment1}
                 alt="Apartment1"
-                className="img-fluid h-75"
+                className="img-fluid h-75 mx-5"
               />
             </Col>
           </Row>

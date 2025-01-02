@@ -50,13 +50,13 @@ const Surface: React.FC = () => {
   return (
     <>
       <Navbar />
-      {/* Apartment Sterilization Section */}
+      {/* Surface Sterilization Section */}
       <section className="serviceOne">
         <Container>
-          <Row className="pt-5 gap-3 gap-lg-0 h-50">
+          <Row className="pt-5 gap-3 gap-lg-0">
             {/* Left Content Section */}
-            <Col lg={6} xs={10} className="left">
-              <h3 className="service-text">Surface sterilization</h3>
+            <Col lg={6} xs={10} className="left order-2 order-lg-1">
+              <h3 className="service-text">Surface Sterilization</h3>
               <div>
                 <h5 className="my-3">Description :</h5>
                 <p className="fs-5 text-secondary">
@@ -70,36 +70,36 @@ const Surface: React.FC = () => {
 
                 <p className="fs-5 text-secondary my-3">
                   Using safe and effective materials to eliminate germs and
-                  bacteria
+                  bacteria.
                 </p>
 
-                <p className="fs-5 text-secondary my-3">
-                  Using safe and effective materials to eliminate germs and
-                  bacteria
-                </p>
                 <p className="fs-5 text-secondary my-3">
                   Focusing on sensitive areas to ensure complete protection.
                 </p>
                 <p className="fs-5 text-secondary my-3">
                   Using steam or chemical disinfectants to kill germs and
-                  viruses effectively
+                  viruses effectively.
                 </p>
-                <p className="fs-5 text-secondary">
+                <p className="fs-5 text-secondary my-3">
                   Focusing on high-risk areas such as kitchens and bathrooms.
                 </p>
               </div>
             </Col>
             {/* Right Section */}
-            <Col lg={6} xs={10} className="right text-center">
+            <Col
+              lg={6}
+              xs={10}
+              className="right text-center order-1 order-lg-2 d-flex justify-content-center">
               <img
                 src={Apartment1}
                 alt="Apartment1"
-                className="img-fluid h-75"
+                className="img-fluid h-75 w-100 mx-auto"
               />
             </Col>
           </Row>
         </Container>
       </section>
+
       {/* Customer Reviews Section */}
       <section className="container">
         <h4 className="colorPrimary">The Results of Our Service in Action :</h4>

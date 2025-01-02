@@ -34,8 +34,10 @@ const AppNavbar: React.FC = () => {
         </Navbar.Brand>
 
         {/* Navbar Toggle */}
-        <Navbar.Toggle aria-controls="navbar-nav" className="colorPrimary" />
-
+        <Navbar.Toggle
+          aria-controls="navbar-nav"
+          className="navbar-toggler bg-light border-0"
+        />
         {/* Navbar Collapse */}
         <Navbar.Collapse
           id="navbar-nav"

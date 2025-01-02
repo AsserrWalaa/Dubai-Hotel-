@@ -44,14 +44,14 @@ const SecondService: React.FC = () => {
         <Container>
           <Row className="my-5 py-5 gap-3 gap-lg-0">
             {/* Left Section */}
-            <Col lg={6} xs={10} className="left">
+            <Col lg={6} xs={12} className="left order-lg-1 order-2">
               <h3 className="service-text">Upholstery cleaning</h3>
               <h6 className="mt-3 service-text">
                 Time:
                 <span className="ms-2 text-secondary">1 Hour 30 Minute</span>
               </h6>
               <h6 className="mt-3 service-text">
-                Days Available :
+                Days Available:
                 <span className="ms-2 text-secondary">All Week</span>
               </h6>
               <p className="text-secondary">
@@ -63,30 +63,30 @@ const SecondService: React.FC = () => {
               </p>
               <div>
                 <h5>1. Initial Assessment of Upholstery</h5>
-                <p className="text-secondary ">
+                <p className="text-secondary">
                   A specialized team evaluates the upholstery (sofas, carpets,
                   curtains, and cushions) to identify the type of fabric and
                   required cleaning level.
                 </p>
 
                 <h5 className="my-2">2. Dust and Surface Dirt Removal</h5>
-                <p className="text-secondary  my-3">
+                <p className="text-secondary my-3">
                   A professional vacuum cleaner is used to remove deep-seated
                   dust from upholstery, focusing on corners and hidden areas.
                 </p>
                 <h5>3. Treating Stubborn Stains</h5>
-                <p className="text-secondary ">
+                <p className="text-secondary">
                   A natural mixture of baking soda and white vinegar is applied
                   to remove tough stains without damaging the fabric.
                 </p>
                 <h5>4. Upholstery Sanitization:</h5>
                 <h5>1. Steam Sanitization:</h5>
-                <p className="text-secondary ">
+                <p className="text-secondary">
                   Advanced steam cleaning devices are used to sanitize
                   upholstery thoroughly, eliminating germs and bacteria.
                 </p>
                 <h5>2. Natural Oils Application:</h5>
-                <p className="text-secondary ">
+                <p className="text-secondary">
                   A mix of water and essential oils (such as tea tree or
                   lavender oil) is sprayed for added disinfection and a
                   long-lasting fresh scent.
@@ -95,12 +95,16 @@ const SecondService: React.FC = () => {
             </Col>
 
             {/* Right Section */}
-            <Col lg={6} xs={10} className="right text-center ">
+            <Col
+              lg={6}
+              xs={12}
+              className="right text-center order-lg-2 order-1">
               <img src={s2} alt="s2" className="img-fluid" />
             </Col>
           </Row>
         </Container>
       </section>
+
       {/* end Apartment Sterilization Section */}
 
       {/* Customer Reviews Section */}

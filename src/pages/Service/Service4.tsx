@@ -47,14 +47,14 @@ const FourthService: React.FC = () => {
         <Container>
           <Row className="my-5 py-5 gap-3 gap-lg-0">
             {/* Left Content Section */}
-            <Col lg={6} xs={10} className="left">
+            <Col lg={6} xs={10} className="left order-1 order-lg-0">
               <h3 className="service-text">Room layout and furnishing</h3>
               <h6 className="mt-3 service-text">
                 Time:
                 <span className="ms-2 text-secondary">1 Hour 30 Minute</span>
               </h6>
               <h6 className="mt-3 service-text">
-                Days Available :
+                Days Available:
                 <span className="ms-2 text-secondary">All Week</span>
               </h6>
               <p>
@@ -66,106 +66,114 @@ const FourthService: React.FC = () => {
               </p>
               <div>
                 <h5>1. Deep Cleaning and Room Preparation:</h5>
-
-                <p className="text-secondary my-3 ">
+                <p className="text-secondary my-3">
                   Clean floors, walls, and windows with eco-friendly products
                   for a bright and polished look.
                 </p>
-                <p className="text-secondary my-3 ">
+                <p className="text-secondary my-3">
                   Sanitize furniture and upholstery to ensure comfort and
                   hygiene.
                 </p>
-                <p className="text-secondary my-3 ">
+                <p className="text-secondary my-3">
                   Declutter and remove excess items to optimize the space.
                 </p>
+
                 <h5 className="mt-3">
                   2. Practical and Elegant Furniture Arrangement:
                 </h5>
                 <div>
                   <h5 className="service-text">A. Living Room:</h5>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">
                     Rearrange the sofa and tables to create an open and
                     welcoming space.
                   </p>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">
                     Position furniture to focus on a central feature like a TV
                     or a window with a view.
                   </p>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">
                     Organize throw pillows neatly with complementary colors.
                   </p>
                 </div>
                 <div>
                   <h5 className="service-text">B. Bedroom:</h5>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">
                     Place the bed centrally, smoothing the bedding and adding
                     neatly arranged pillows.
                   </p>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">
                     Add bedside tables with simple touches (like a lamp or a
                     book).
                   </p>
-                  <p className="text-secondary ">
-                    Adjust and tidy curtains to highlight elegance
+                  <p className="text-secondary">
+                    Adjust and tidy curtains to highlight elegance.
                   </p>
                 </div>
                 <div>
                   <h5 className="service-text">C. Dining Area:</h5>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">
                     Clean the dining table and arrange chairs symmetrically.
                   </p>
-                  <p className="text-secondary ">
-                    Add a simple centerpiece (like a vase or scented candles
+                  <p className="text-secondary">
+                    Add a simple centerpiece (like a vase or scented candles).
                   </p>
                 </div>
                 <div>
                   <h5 className="service-text">D. Kitchen and Bathroom:</h5>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">
                     Organize kitchen tools neatly in drawers and cabinets.
                   </p>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">
                     Arrange towels in the bathroom decoratively, placing them on
-                    shelves or in stylish baskets.{" "}
+                    shelves or in stylish baskets.
                   </p>
                 </div>
+
                 <h5>3. Adding Simple Luxury Touches:</h5>
                 <div>
                   <h5 className="service-text">
                     A. Decorations and Accessories:
                   </h5>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">
                     Place subtle accents like scented candles or fresh flowers
                     on tables or shelves.
                   </p>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">
                     Use small, budget-friendly décor items (such as small
                     mirrors or framed pictures).
                   </p>
                 </div>
                 <div>
                   <h5 className="service-text">B. Fragrance:</h5>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">
                     Refresh rooms with natural air fresheners featuring light
                     scents like lavender or rose.
                   </p>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">
                     Ensure long-lasting freshness to enhance comfort.
                   </p>
                 </div>
                 <div>
                   <h5 className="service-text">C. Lighting:</h5>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">
                     Clean light fixtures and direct lighting to highlight the
                     room's best features.
                   </p>
                 </div>
               </div>
             </Col>
-            {/* Right Section */}
-            <Col lg={6} xs={10} className="right text-center ">
-              <img src={Apartment4} alt="Apartment4" className="img-fluid" />
-            </Col>
+
             {/* Right Image Section */}
+            <Col
+              lg={6}
+              xs={10}
+              className="right text-center order-0 order-lg-1 col-lg-6">
+              <img
+                src={Apartment4}
+                alt="Apartment4"
+                className="img-fluid mx-5 mb-lg-0 mb-5"
+              />
+            </Col>
           </Row>
         </Container>
       </section>

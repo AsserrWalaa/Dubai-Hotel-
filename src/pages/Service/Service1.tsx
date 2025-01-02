@@ -43,17 +43,17 @@ const FirstService: React.FC = () => {
     <>
       {/* Apartment Sterilization Section */}
       <section className="serviceOne">
-        <Container className="">
+        <Container>
           <Row className="pt-5 gap-3 gap-lg-0">
             {/* Left Content Section */}
-            <Col lg={6} xs={10} className="left ">
+            <Col lg={6} xs={12} className="order-2 order-lg-1 left">
               <h3 className="service-text">Apartment Sterilization</h3>
               <h6 className="mt-3 service-text">
                 Time:
                 <span className="ms-2 text-secondary">1 Hour 30 Minute</span>
               </h6>
               <h6 className="mt-3 service-text">
-                Days Available :
+                Days Available:
                 <span className="ms-2 text-secondary">All Week</span>
               </h6>
               <div>
@@ -100,11 +100,14 @@ const FirstService: React.FC = () => {
                 </ul>
               </div>
             </Col>
+
             {/* Right Section */}
-            <Col lg={6} xs={10} className="right text-center ">
-              <img src={Apartment1} alt="Apartment1" className="img-fluid" />
+            <Col
+              lg={6}
+              xs={12}
+              className="order-1 order-lg-2 text-center right">
+              <img src={Apartment1} alt="Apartment1" className="w-100 " />
             </Col>
-            {/* Right Image Section */}
           </Row>
         </Container>
       </section>

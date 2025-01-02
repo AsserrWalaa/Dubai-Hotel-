@@ -27,7 +27,7 @@ const Service = () => {
         {/* Button Section */}
         <div className="topics row row-cols-2 row-cols-md-4 justify-content-center">
           {/* Option 1 */}
-          <div className="col text-center">
+          <div className="col text-center my-1">
             <button
               className={`btn topic-check w-100 py-2 rounded-4 ${
                 selectedOption === "option1" ? "btn-active" : ""
@@ -38,9 +38,9 @@ const Service = () => {
           </div>
 
           {/* Option 2 */}
-          <div className="col text-center">
+          <div className="col text-center my-1">
             <button
-              className={`btn topic-check w-100 py-2 rounded-4 ${
+              className={`btn topic-check w-100 py-2 rounded-4 text-center ${
                 selectedOption === "option2" ? "btn-active" : ""
               }`}
               onClick={() => handleOptionChange("option2")}>
@@ -49,7 +49,7 @@ const Service = () => {
           </div>
 
           {/* Option 3 */}
-          <div className="col text-center">
+          <div className="col text-center my-1">
             <button
               className={`btn topic-check w-100 py-2 rounded-4 ${
                 selectedOption === "option3" ? "btn-active" : ""
@@ -60,7 +60,7 @@ const Service = () => {
           </div>
 
           {/* Option 4 */}
-          <div className="col text-center">
+          <div className="col text-center my-1">
             <button
               className={`btn topic-check w-100 py-2 rounded-4 ${
                 selectedOption === "option4" ? "btn-active" : ""

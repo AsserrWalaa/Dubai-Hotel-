@@ -55,7 +55,7 @@ const Kitchen: React.FC = () => {
         <Container>
           <Row className="pt-5 gap-3 gap-lg-0 h-50">
             {/* Left Content Section */}
-            <Col lg={6} xs={10} className="left">
+            <Col lg={6} xs={10} className="left order-2 order-lg-1">
               <h3 className="service-text">Kitchen Cleaning</h3>
               <div>
                 <h5 className="my-3">Description :</h5>
@@ -70,7 +70,7 @@ const Kitchen: React.FC = () => {
 
                 <p className="fs-5 text-secondary my-3">
                   Degreasing and removing food residue from appliances like
-                  ovens and microwaves.{" "}
+                  ovens and microwaves.
                 </p>
 
                 <p className="fs-5 text-secondary my-3">
@@ -91,11 +91,14 @@ const Kitchen: React.FC = () => {
               </div>
             </Col>
             {/* Right Section */}
-            <Col lg={6} xs={10} className="right text-center">
+            <Col
+              lg={6}
+              xs={10}
+              className="right text-center order-1 order-lg-2 d-flex justify-content-center ">
               <img
                 src={Apartment1}
                 alt="Apartment1"
-                className="img-fluid h-75"
+                className="img-fluid h-75 mx-5"
               />
             </Col>
           </Row>
@@ -103,7 +106,7 @@ const Kitchen: React.FC = () => {
       </section>
 
       {/* Customer Reviews Section */}
-      <section className="container">
+      <section className="container mt-3">
         <h4 className="colorPrimary">The Results of Our Service in Action :</h4>
         <Swiper
           slidesPerView={1} // Default: Single card

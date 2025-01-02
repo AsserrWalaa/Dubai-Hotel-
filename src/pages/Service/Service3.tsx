@@ -47,24 +47,24 @@ const ThirdService: React.FC = () => {
         <Container>
           <Row className="my-5 py-5 gap-3 gap-lg-0">
             {/* Left Content Section */}
-            <Col lg={6} xs={10} className="left">
+            <Col lg={6} xs={12} className="left order-lg-1 order-2">
               <h4 className="service-text">Kitchen and bathroom cleaning</h4>
               <h6 className="mt-3 service-text">
-                Time:
+                Time:{" "}
                 <span className="ms-2 text-secondary">1 Hour 30 Minute</span>
               </h6>
               <h6 className="my-3 service-text">
-                Days Available :
+                Days Available:{" "}
                 <span className="ms-2 text-secondary">All Week</span>
               </h6>
               <div>
                 <div>
                   <h6 className="pb-1">1. Cleaning Appliances:</h6>
                   <h5 className="service-text">A. Oven and Stove:</h5>
-                  <p className="text-secondary my-2 ">
+                  <p className="text-secondary my-2">
                     Removing Grease and Stains:
                   </p>
-                  <p className="text-secondary my-2 ">
+                  <p className="text-secondary my-2">
                     2. Sprinkle baking soda on tough stains and let it sit for
                     15 minutes, then scrub with a soft brush.
                   </p>
@@ -72,34 +72,34 @@ const ThirdService: React.FC = () => {
                 <div>
                   <h5 className="service-text">B. Microwave:</h5>
                   <h5 className="mt-3">Cleaning Method:</h5>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">
                     2. Run the microwave for 3-5 minutes to allow the water to
                     steam.
                   </p>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">
                     3. Wipe the interior with a soft cloth to remove stains and
-                    odors
+                    odors.
                   </p>
                 </div>
                 <div>
                   <h5 className="service-text">C. Refrigerator:</h5>
-                  <p className="text-secondary ">Cleaning Shelves and Walls:</p>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">Cleaning Shelves and Walls:</p>
+                  <p className="text-secondary">
                     1. Remove all contents and unplug the refrigerator.
                   </p>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">
                     2. Wipe the shelves and walls with a mixture of warm water
                     and vinegar.
                   </p>
                 </div>
                 <div>
                   <h5 className="service-text">D. Dishwasher:</h5>
-                  <p className="text-secondary ">Sanitizing and Deodorizing:</p>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">Sanitizing and Deodorizing:</p>
+                  <p className="text-secondary">
                     1. Place a cup of white vinegar on the top rack and run an
                     empty short cycle.
                   </p>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">
                     2. Wipe the shelves and walls with a mixture of warm water
                     and vinegar.
                   </p>
@@ -107,18 +107,18 @@ const ThirdService: React.FC = () => {
                 <h5>1. Cleaning Appliances:</h5>
                 <div>
                   <h5 className="service-text">A. Surfaces:</h5>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">
                     Wipe all surfaces with a mixture of water and white vinegar.
                   </p>
                 </div>
                 <div>
                   <h5 className="service-text">B. Sink and Faucets:</h5>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">
                     Use a mixture of baking soda and water to scrub stains
                     around the sink.
                   </p>
                   <h5 className="service-text">C. Tiles and Walls:</h5>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">
                     Spray a mixture of warm water and white vinegar on the tiles
                     and walls.
                   </p>
@@ -131,7 +131,7 @@ const ThirdService: React.FC = () => {
                     1. Cleaning Appliances and Facilities:
                   </h6>
                   <h5 className="service-text">A. Toilet:</h5>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">
                     Spray a mixture of white vinegar and tea tree oil inside and
                     around the toilet. <br />
                     Scrub with a toilet brush and flush with water.
@@ -139,15 +139,15 @@ const ThirdService: React.FC = () => {
                 </div>
                 <div>
                   <h5 className="service-text">B. Sink and Faucets:</h5>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">
                     Use a mixture of baking soda and water to scrub stains
                     around the sink. <br />
-                    Wipe the faucets with a cloth dampened with lemon water
+                    Wipe the faucets with a cloth dampened with lemon water.
                   </p>
                 </div>
                 <div>
                   <h5 className="service-text">C. Tiles and Walls:</h5>
-                  <p className="text-secondary ">
+                  <p className="text-secondary">
                     Spray a mixture of warm water and white vinegar on the tiles
                     and walls. <br />
                     Scrub with a soft brush to remove stains and lime deposits.
@@ -155,11 +155,14 @@ const ThirdService: React.FC = () => {
                 </div>
               </div>
             </Col>
+
             {/* Right Section */}
-            <Col lg={6} xs={10} className="right text-center ">
+            <Col
+              lg={6}
+              xs={12}
+              className="right text-center order-lg-2 order-1">
               <img src={Apartment3} alt="Apartment3" className="img-fluid" />
             </Col>
-            {/* Right Image Section */}
           </Row>
         </Container>
       </section>

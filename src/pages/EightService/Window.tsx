@@ -50,18 +50,18 @@ const Window: React.FC = () => {
   return (
     <>
       <Navbar />
-      {/* Apartment Sterilization Section */}
+      {/* Window Cleaning Section */}
       <section className="serviceOne">
         <Container>
-          <Row className="pt-5 gap-3 gap-lg-0 h-50">
+          <Row className="pt-5 gap-3 gap-lg-0">
             {/* Left Content Section */}
-            <Col lg={6} xs={10} className="left">
+            <Col lg={6} xs={10} className="left order-2 order-lg-1">
               <h3 className="service-text">Window Cleaning</h3>
               <div>
                 <h5 className="my-3">Description :</h5>
                 <p className="fs-5 text-secondary">
                   Our window cleaning service ensures completely transparent and
-                  spotless windows. The details include :
+                  spotless windows. The details include:
                 </p>
 
                 <p className="fs-5 text-secondary my-3">
@@ -77,13 +77,16 @@ const Window: React.FC = () => {
                   Polishing glass with special materials for a streak-free
                   shine.
                 </p>
+
                 <p className="fs-5 text-secondary my-3">
                   Cleaning and disinfecting sinks, toilets, and showers with
-                  specialized materials to eliminate germs
+                  specialized materials to eliminate germs.
                 </p>
+
                 <p className="fs-5 text-secondary my-3">
-                  Removing limescale and stubborn stains from tiles and walls
+                  Removing limescale and stubborn stains from tiles and walls.
                 </p>
+
                 <p className="fs-5 text-secondary">
                   Cleaning windows from both inside and outside for a flawless
                   view.
@@ -91,11 +94,14 @@ const Window: React.FC = () => {
               </div>
             </Col>
             {/* Right Section */}
-            <Col lg={6} xs={10} className="right text-center">
+            <Col
+              lg={6}
+              xs={10}
+              className="right text-center order-1 order-lg-2 d-flex justify-content-center ">
               <img
                 src={Apartment1}
                 alt="Apartment1"
-                className="img-fluid h-75"
+                className="img-fluid h-75 mx-5"
               />
             </Col>
           </Row>
