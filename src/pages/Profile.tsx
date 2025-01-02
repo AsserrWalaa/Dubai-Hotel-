@@ -2,7 +2,7 @@ import React from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 import "../style/global.css";
-import { Form, Container, InputGroup } from "react-bootstrap";
+import { Form, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { FiUserPlus } from "react-icons/fi";
